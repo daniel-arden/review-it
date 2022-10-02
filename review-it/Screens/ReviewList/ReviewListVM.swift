@@ -10,7 +10,7 @@ extension ReviewListVM {
     @MainActor
     func fetchReviews() async throws {
         let reviewFeed: ReviewFeed = try await apiService.getRequest(
-            urlString: "https://itunes.apple.com/us/rss/customerreviews/id=389801252/json"
+            urlString: Constants.reviewUrlString(for: "389801252")
         )
         reviews = reviewFeed.reviews
     }
