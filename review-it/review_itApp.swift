@@ -4,7 +4,7 @@ import SwiftUI
 struct review_itApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ReviewListScreen()
         }
     }
 }
