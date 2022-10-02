@@ -3,6 +3,8 @@ import SwiftUI
 final class ReviewListVM: ObservableObject {
     private let apiService = APIService.shared
 
+    @Published private(set) var tileModels: [AppTileModel] = [.addNew]
+    @Published var selectedAppModel: AppModel?
     @Published private(set) var reviews: [Review] = []
 }
 

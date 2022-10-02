@@ -4,13 +4,26 @@ struct ReviewListScreen: View {
     @StateObject private var viewModel = ReviewListVM()
 
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading) {
-                ForEach(viewModel.reviews) {
-                    ReviewCardView(review: $0)
-                }
+        VStack {
+            VStack(spacing: 0) {
+                AppCarouselView(
+                    selection: $viewModel.selectedAppModel,
+                    tileModels: viewModel.tileModels
+                )
+                .padding(.vertical)
+
+                Divider()
             }
-            .padding()
+            .fixedSize(horizontal: false, vertical: true)
+
+            ScrollView {
+                LazyVStack(alignment: .leading) {
+                    ForEach(viewModel.reviews) {
+                        ReviewCardView(review: $0)
+                    }
+                }
+                .padding()
+            }
         }
         .frame(minWidth: 400, minHeight: 400)
         .task {
