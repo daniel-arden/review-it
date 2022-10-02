@@ -1,10 +1,3 @@
-//
-//  review_itTests.swift
-//  review-itTests
-//
-//  Created by Daniel Arden on 02.10.2022.
-//
-
 import XCTest
 
 final class review_itTests: XCTestCase {
