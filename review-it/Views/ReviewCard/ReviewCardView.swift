@@ -27,6 +27,7 @@ struct ReviewCardView: View {
         .padding()
         .background(Color.backgroundSecondary)
         .cornerRadius(12)
+        .textSelection(.enabled)
     }
 }
 
@@ -37,7 +38,7 @@ struct ReviewCardView_Previews: PreviewProvider {
                 author: Author(
                     name: .init(label: "Monsieur Reviewer")
                 ),
-                updated: .init(label: "2022-"),
+                updated: .init(label: "4th of June 2022"),
                 rating: .init(label: "4"),
                 id: .init(label: "273894943"),
                 title: .init(label: "The best app ever!"),
