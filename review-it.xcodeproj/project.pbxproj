@@ -15,8 +15,8 @@
 		5A1F54DD28E9A1AE0038A1CC /* review_itUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54DC28E9A1AE0038A1CC /* review_itUITestsLaunchTests.swift */; };
 		5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */; };
 		5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54EC28E9A2090038A1CC /* Feed.swift */; };
-		5A1F54EF28E9A2140038A1CC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54EE28E9A2140038A1CC /* Entry.swift */; };
-		5A1F54F128E9A2260038A1CC /* NestedLabelString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54F028E9A2260038A1CC /* NestedLabelString.swift */; };
+		5A1F54EF28E9A2140038A1CC /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54EE28E9A2140038A1CC /* Review.swift */; };
+		5A1F54F128E9A2260038A1CC /* NestedLabelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54F028E9A2260038A1CC /* NestedLabelType.swift */; };
 		5A1F54F328E9A23A0038A1CC /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54F228E9A23A0038A1CC /* Author.swift */; };
 		5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54F528E9A2710038A1CC /* APIService.swift */; };
 		5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54F728E9A27A0038A1CC /* APIError.swift */; };
@@ -25,6 +25,9 @@
 		5A1F550328E9A32E0038A1CC /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F550228E9A32E0038A1CC /* ReviewCardView.swift */; };
 		5A1F550628E9A33A0038A1CC /* Color+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F550528E9A33A0038A1CC /* Color+Convenience.swift */; };
 		5A1F550828E9A3490038A1CC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1F550728E9A3490038A1CC /* Colors.xcassets */; };
+		5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F550E28E9BCEE0038A1CC /* FormattingService.swift */; };
+		5A1F551128E9BD580038A1CC /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F551028E9BD580038A1CC /* Rating.swift */; };
+		5A1F551628E9C14F0038A1CC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F551528E9C14F0038A1CC /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +60,8 @@
 		5A1F54DC28E9A1AE0038A1CC /* review_itUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = review_itUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFeed.swift; sourceTree = "<group>"; };
 		5A1F54EC28E9A2090038A1CC /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
-		5A1F54EE28E9A2140038A1CC /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		5A1F54F028E9A2260038A1CC /* NestedLabelString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedLabelString.swift; sourceTree = "<group>"; };
+		5A1F54EE28E9A2140038A1CC /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		5A1F54F028E9A2260038A1CC /* NestedLabelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedLabelType.swift; sourceTree = "<group>"; };
 		5A1F54F228E9A23A0038A1CC /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		5A1F54F528E9A2710038A1CC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5A1F54F728E9A27A0038A1CC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -67,6 +70,9 @@
 		5A1F550228E9A32E0038A1CC /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		5A1F550528E9A33A0038A1CC /* Color+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Convenience.swift"; sourceTree = "<group>"; };
 		5A1F550728E9A3490038A1CC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5A1F550E28E9BCEE0038A1CC /* FormattingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingService.swift; sourceTree = "<group>"; };
+		5A1F551028E9BD580038A1CC /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		5A1F551528E9C14F0038A1CC /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +168,9 @@
 				5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */,
 				5A1F54F228E9A23A0038A1CC /* Author.swift */,
 				5A1F54EC28E9A2090038A1CC /* Feed.swift */,
-				5A1F54EE28E9A2140038A1CC /* Entry.swift */,
-				5A1F54F028E9A2260038A1CC /* NestedLabelString.swift */,
+				5A1F54EE28E9A2140038A1CC /* Review.swift */,
+				5A1F54F028E9A2260038A1CC /* NestedLabelType.swift */,
+				5A1F551028E9BD580038A1CC /* Rating.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			children = (
 				5A1F54F528E9A2710038A1CC /* APIService.swift */,
 				5A1F54F728E9A27A0038A1CC /* APIError.swift */,
+				5A1F550E28E9BCEE0038A1CC /* FormattingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -197,17 +205,10 @@
 		5A1F550028E9A3240038A1CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5A1F550128E9A3280038A1CC /* ReviewCard */,
+				5A1F550228E9A32E0038A1CC /* ReviewCardView.swift */,
+				5A1F551528E9C14F0038A1CC /* RatingView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		5A1F550128E9A3280038A1CC /* ReviewCard */ = {
-			isa = PBXGroup;
-			children = (
-				5A1F550228E9A32E0038A1CC /* ReviewCardView.swift */,
-			);
-			path = ReviewCard;
 			sourceTree = "<group>";
 		};
 		5A1F550428E9A3340038A1CC /* Extensions */ = {
@@ -350,16 +351,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1F550628E9A33A0038A1CC /* Color+Convenience.swift in Sources */,
-				5A1F54EF28E9A2140038A1CC /* Entry.swift in Sources */,
+				5A1F54EF28E9A2140038A1CC /* Review.swift in Sources */,
 				5A1F54FD28E9A2DB0038A1CC /* ReviewListScreen.swift in Sources */,
+				5A1F551628E9C14F0038A1CC /* RatingView.swift in Sources */,
 				5A1F550328E9A32E0038A1CC /* ReviewCardView.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
+				5A1F551128E9BD580038A1CC /* Rating.swift in Sources */,
 				5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */,
-				5A1F54F128E9A2260038A1CC /* NestedLabelString.swift in Sources */,
+				5A1F54F128E9A2260038A1CC /* NestedLabelType.swift in Sources */,
 				5A1F54F328E9A23A0038A1CC /* Author.swift in Sources */,
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,
 				5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */,
+				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
 				5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

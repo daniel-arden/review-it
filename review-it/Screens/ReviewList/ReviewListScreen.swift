@@ -7,7 +7,7 @@ struct ReviewListScreen: View {
         ScrollView {
             LazyVStack(alignment: .leading) {
                 ForEach(viewModel.reviews) {
-                    ReviewCardView(entry: $0)
+                    ReviewCardView(review: $0)
                 }
             }
             .padding()

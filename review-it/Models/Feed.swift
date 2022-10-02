@@ -1,3 +1,7 @@
 struct Feed: Decodable, Hashable {
-    let entry: [Entry]
+    private enum CodingKeys: String, CodingKey {
+        case reviews = "entry"
+    }
+
+    let reviews: [Review]
 }

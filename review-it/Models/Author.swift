@@ -1,3 +1,3 @@
 struct Author: Decodable, Hashable {
-    let name: NestedLabelString
+    let name: NestedLabelType<String>
 }
