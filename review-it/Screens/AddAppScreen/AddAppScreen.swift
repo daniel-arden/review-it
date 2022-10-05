@@ -39,6 +39,19 @@ private extension AddAppScreen {
             informationText("No results found for given query. Try a different query.")
         }
     }
+
+    var innerContentView: some View {
+        ZStack {
+            switch addAppScreenVM.searchState {
+            case let .error(error):
+                informationText(error.localizedDescription)
+            case .initial:
+                informationText("Search for apps on the AppStore")
+            case let .results(appModels):
+                resultsView(appModels: appModels)
+            }
+        }
+    }
 }
 
 #if os(iOS)
@@ -46,30 +59,21 @@ private extension AddAppScreen {
 private extension AddAppScreen {
     var content: some View {
         NavigationView {
-            ZStack {
-                switch addAppScreenVM.searchState {
-                case let .error(error):
-                    informationText(error.localizedDescription)
-                case .initial:
-                    informationText("Search for apps on the AppStore")
-                case let .results(appModels):
-                    resultsView(appModels: appModels)
+            innerContentView
+                .searchable(text: $addAppScreenVM.searchText)
+                .onSubmit(of: .search) {
+                    addAppScreenVM.search()
                 }
-            }
-            .searchable(text: $addAppScreenVM.searchText)
-            .onSubmit(of: .search) {
-                addAppScreenVM.search()
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "multiply")
-                    }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "multiply")
+                        }
 
+                    }
                 }
-            }
         }
     }
 }
@@ -79,7 +83,18 @@ private extension AddAppScreen {
 // MARK: - MacOS Views
 private extension AddAppScreen {
     var content: some View {
-        Text("Mac OS View")
+        VStack(spacing: 0) {
+            SearchbarView(text: $addAppScreenVM.searchText)
+
+            innerContentView
+
+            Spacer()
+        }
+        .padding()
+        .frame(
+            maxWidth: 800
+        )
+        .onKeyDown(.escape) { dismiss() }
     }
 }
 #endif

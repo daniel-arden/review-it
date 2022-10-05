@@ -38,6 +38,8 @@
 		5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */; };
 		5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */; };
 		5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */; };
+		5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */; };
+		5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingButtonStyle.swift; sourceTree = "<group>"; };
 		5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreen.swift; sourceTree = "<group>"; };
 		5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreenVM.swift; sourceTree = "<group>"; };
+		5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnKeyDown.swift"; sourceTree = "<group>"; };
+		5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,7 @@
 				5A1F552728EA25A70038A1CC /* AppCarouselView.swift */,
 				5A1F551528E9C14F0038A1CC /* RatingView.swift */,
 				5A1F552128EA1CD60038A1CC /* AppTileView.swift */,
+				5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1F550528E9A33A0038A1CC /* Color+Convenience.swift */,
+				5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */,
 				5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */,
 			);
 			path = Extensions;
@@ -403,6 +409,7 @@
 				5A1F551628E9C14F0038A1CC /* RatingView.swift in Sources */,
 				5A1F550328E9A32E0038A1CC /* ReviewCardView.swift in Sources */,
 				5A1F552028EA1A230038A1CC /* ImageRepresentable.swift in Sources */,
+				5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */,
 				5A1F552228EA1CD60038A1CC /* AppTileView.swift in Sources */,
 				5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
@@ -418,6 +425,7 @@
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,
 				5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */,
 				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
+				5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */,
 				5A1F552828EA25A70038A1CC /* AppCarouselView.swift in Sources */,
 				5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */,
 				5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */,
