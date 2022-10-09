@@ -124,6 +124,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A13D5F028F2E0A700A15735 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5A1F54F528E9A2710038A1CC /* APIService.swift */,
+				5A1F54F728E9A27A0038A1CC /* APIError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5A13D5F128F2E0B100A15735 /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				5A1F550E28E9BCEE0038A1CC /* FormattingService.swift */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
 		5A1F54B228E9A1AC0038A1CC = {
 			isa = PBXGroup;
 			children = (
@@ -205,9 +222,8 @@
 		5A1F54F428E9A2570038A1CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5A1F54F528E9A2710038A1CC /* APIService.swift */,
-				5A1F54F728E9A27A0038A1CC /* APIError.swift */,
-				5A1F550E28E9BCEE0038A1CC /* FormattingService.swift */,
+				5A13D5F128F2E0B100A15735 /* Formatting */,
+				5A13D5F028F2E0A700A15735 /* API */,
 			);
 			path = Services;
 			sourceTree = "<group>";

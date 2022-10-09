@@ -12,6 +12,7 @@ final class APIService {
         return try await withCheckedThrowingContinuation { continuation in
             URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
                 if let error = error {
+                    print("❌❌❌", error)
                     continuation.resume(throwing: error)
                     return
                 }
@@ -19,20 +20,26 @@ final class APIService {
                 let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
 
                 guard (200...299).contains(statusCode) else {
-                    continuation.resume(throwing: APIError.invalidResponse(code: statusCode))
+                    let error = APIError.invalidResponse(code: statusCode)
+                    print("❌❌❌", error)
+                    continuation.resume(throwing: error)
                     return
                 }
 
                 guard let data = data else {
-                    continuation.resume(throwing: APIError.dataNotAvailable)
+                    let error = APIError.dataNotAvailable
+                    print("❌❌❌", error)
+                    continuation.resume(throwing: error)
                     return
                 }
 
                 do {
                     let decodedData = try self.decoder.decode(T.self, from: data)
+                    print("✅✅✅ Successfully decoded following data:")
+                    debugPrint(decodedData, terminator: "\n\n")
                     continuation.resume(returning: decodedData)
                 } catch {
-                    print(error)
+                    print("❌❌❌", error)
                     continuation.resume(throwing: APIError.decodingError(error))
                 }
             }

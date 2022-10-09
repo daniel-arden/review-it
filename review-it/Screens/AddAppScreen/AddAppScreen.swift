@@ -61,9 +61,6 @@ private extension AddAppScreen {
         NavigationView {
             innerContentView
                 .searchable(text: $addAppScreenVM.searchText)
-                .onSubmit(of: .search) {
-                    addAppScreenVM.search()
-                }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -77,9 +74,7 @@ private extension AddAppScreen {
         }
     }
 }
-#endif
-
-#if os(macOS)
+#elseif os(macOS)
 // MARK: - MacOS Views
 private extension AddAppScreen {
     var content: some View {

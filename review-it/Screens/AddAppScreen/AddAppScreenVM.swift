@@ -1,16 +1,37 @@
+import Combine
 import SwiftUI
 
 final class AddAppScreenVM: ObservableObject {
+    // MARK: Private Properties
+    private var searchCancellable: AnyCancellable?
+
+    // MARK: Public Properties
     @Published var searchText = ""
     @Published var searchState: SearchState = .initial
-}
 
-extension AddAppScreenVM {
-    func search() {
-        
+    init() {
+        bind()
     }
 }
 
+// MARK: - Private API
+private extension AddAppScreenVM {
+    func bind() {
+        searchCancellable = $searchText
+            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines)}
+            .removeDuplicates()
+            .sink { [weak self] searchText in
+                self?.performSearch(of: searchText)
+            }
+    }
+
+    func performSearch(of searchText: String) {
+        print(searchText)
+    }
+}
+
+// MARK: - SearchState
 extension AddAppScreenVM {
     enum SearchState: Equatable {
         case error(Error)
