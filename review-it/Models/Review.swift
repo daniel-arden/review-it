@@ -3,25 +3,26 @@ import Foundation
 struct Review: Decodable, Hashable, Identifiable {
     private enum CodingKeys: String, CodingKey {
         case _author = "author"
-        case _updated = "updated"
-        case _title = "title"
-        case _id = "id"
         case _content = "content"
+        case _id = "id"
         case _rating = "im:rating"
+        case _title = "title"
+        case _updated = "updated"
     }
 
     private let _author: Author
-    private let _updated: NestedLabelType<String>
+    private let _content: NestedLabelType<String>
+    private let _id: NestedLabelType<String>
     private let _rating: NestedLabelType<String>
     private let _title: NestedLabelType<String>
-    private let _id: NestedLabelType<String>
-    private let _content: NestedLabelType<String>
+    private let _updated: NestedLabelType<String>
 
-    var id: String { _id.label }
     var authorName: String { _author.name.label }
+    var caption: String { _content.label }
     var dateUpdated: Date? {
         FormattingService.dateFormatter.date(from: _updated.label)
     }
+    var id: String { _id.label }
     var rating: Rating? {
         guard let ratingNumber = Int(_rating.label) else {
             return nil
@@ -30,5 +31,4 @@ struct Review: Decodable, Hashable, Identifiable {
         return Rating(rawValue: ratingNumber)
     }
     var title: String { _title.label }
-    var caption: String { _content.label }
 }
