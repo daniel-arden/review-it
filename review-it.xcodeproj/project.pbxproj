@@ -13,6 +13,8 @@
 		5A13D5FD28F2EB5E00A15735 /* AppSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D5FC28F2EB5E00A15735 /* AppSearchResultView.swift */; };
 		5A13D5FF28F30E2400A15735 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D5FE28F30E2400A15735 /* RoundedButtonStyle.swift */; };
 		5A13D60128F35E6300A15735 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60028F35E6300A15735 /* AppView.swift */; };
+		5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60328F36FC300A15735 /* PersistenceController.swift */; };
+		5A13D60728F3747F00A15735 /* review-it.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60528F3747F00A15735 /* review-it.xcdatamodeld */; };
 		5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54BE28E9A1AC0038A1CC /* review_itApp.swift */; };
 		5A1F54C328E9A1AE0038A1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1F54C228E9A1AE0038A1CC /* Assets.xcassets */; };
 		5A1F54C728E9A1AE0038A1CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1F54C628E9A1AE0038A1CC /* Preview Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		5A13D5FC28F2EB5E00A15735 /* AppSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchResultView.swift; sourceTree = "<group>"; };
 		5A13D5FE28F30E2400A15735 /* RoundedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonStyle.swift; sourceTree = "<group>"; };
 		5A13D60028F35E6300A15735 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		5A13D60328F36FC300A15735 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		5A13D60628F3747F00A15735 /* review-it.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "review-it.xcdatamodel"; sourceTree = "<group>"; };
 		5A1F54BB28E9A1AC0038A1CC /* review-it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "review-it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1F54BE28E9A1AC0038A1CC /* review_itApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = review_itApp.swift; sourceTree = "<group>"; };
 		5A1F54C228E9A1AE0038A1CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +164,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		5A13D60228F36FB900A15735 /* PersistentController */ = {
+			isa = PBXGroup;
+			children = (
+				5A13D60328F36FC300A15735 /* PersistenceController.swift */,
+			);
+			path = PersistentController;
+			sourceTree = "<group>";
+		};
 		5A1F54B228E9A1AC0038A1CC = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +204,7 @@
 				5A1F54BE28E9A1AC0038A1CC /* review_itApp.swift */,
 				5A1F54C228E9A1AE0038A1CC /* Assets.xcassets */,
 				5A1F550728E9A3490038A1CC /* Colors.xcassets */,
+				5A13D60528F3747F00A15735 /* review-it.xcdatamodeld */,
 				5A1F54C428E9A1AE0038A1CC /* review_it.entitlements */,
 				5A1F54C528E9A1AE0038A1CC /* Preview Content */,
 			);
@@ -241,6 +254,7 @@
 		5A1F54F428E9A2570038A1CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5A13D60228F36FB900A15735 /* PersistentController */,
 				5A13D5F328F2E2EF00A15735 /* Search */,
 				5A13D5F128F2E0B100A15735 /* Formatting */,
 				5A13D5F028F2E0A700A15735 /* API */,
@@ -451,6 +465,7 @@
 				5A1F552028EA1A230038A1CC /* ImageRepresentable.swift in Sources */,
 				5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */,
 				5A1F552228EA1CD60038A1CC /* AppTileView.swift in Sources */,
+				5A13D60728F3747F00A15735 /* review-it.xcdatamodeld in Sources */,
 				5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
@@ -463,6 +478,7 @@
 				5A1F54F328E9A23A0038A1CC /* Author.swift in Sources */,
 				5A1F551D28EA19EB0038A1CC /* AppModel.swift in Sources */,
 				5A13D5FD28F2EB5E00A15735 /* AppSearchResultView.swift in Sources */,
+				5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */,
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,
 				5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */,
 				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
@@ -824,6 +840,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A13D60528F3747F00A15735 /* review-it.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A13D60628F3747F00A15735 /* review-it.xcdatamodel */,
+			);
+			currentVersion = 5A13D60628F3747F00A15735 /* review-it.xcdatamodel */;
+			path = "review-it.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A1F54B328E9A1AC0038A1CC /* Project object */;
 }

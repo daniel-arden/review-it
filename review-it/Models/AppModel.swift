@@ -1,10 +1,18 @@
+import CoreData
 import Foundation
 
-struct AppModel: Identifiable, Hashable {
-    let appIconUrl: URL
-    let appName: String
-    let developerName: String
-    let developerUrl: URL
-    let rating: Float
-    let id: Int
+final class AppModel: NSManagedObject, Identifiable {
+    @NSManaged var appIconUrl: URL
+    @NSManaged var appName: String
+    @NSManaged var developerName: String
+    @NSManaged var developerUrl: URL
+    @NSManaged var rating: Float
+    @NSManaged var id: Int
+    @NSManaged var saveDate: Date
+}
+
+extension AppModel {
+    static func sortDescriptors() -> [SortDescriptor<AppModel>] {
+        [SortDescriptor(\.saveDate, order: .reverse)]
+    }
 }
