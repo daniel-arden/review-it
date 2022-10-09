@@ -26,7 +26,11 @@ private extension AddAppScreen {
             ScrollView {
                 VStack {
                     ForEach(appSearchResults) { appSearchResult in
-                        Text("App Search Result View")
+                        AppSearchResultView(
+                            appSearchResult: appSearchResult
+                        ) {
+                            dismiss()
+                        }
                     }
                 }
             }
