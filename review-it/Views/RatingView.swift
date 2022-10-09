@@ -1,21 +1,35 @@
 import SwiftUI
 
 struct RatingView: View {
-    let rating: Rating
-
-    private var filledStarsCount: Int { rating.rawValue }
-    private var nonFilledStarsCount: Int { 5 - rating.rawValue }
+    private static let starSpacing: CGFloat = 2
+    private static let maxStarCount = 5
+    let rating: Float
 
     var body: some View {
-        HStack {
-            ForEach(0..<filledStarsCount, id: \.self) { _ in
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-            }
-
-            ForEach(0..<nonFilledStarsCount, id: \.self) { _ in
+        HStack(spacing: Self.starSpacing) {
+            ForEach(0..<Self.maxStarCount, id: \.self) { _ in
                 Image(systemName: "star")
                     .foregroundColor(.secondary)
+            }
+        }
+        .overlay {
+            GeometryReader { proxy in
+                HStack(spacing: Self.starSpacing) {
+                    ForEach(0..<Self.maxStarCount, id: \.self) { _ in
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                    }
+                }
+                .mask {
+                    HStack {
+                        Rectangle()
+                            .frame(
+                                width: proxy.size.width * CGFloat(rating) / CGFloat(Self.maxStarCount)
+                            )
+
+                        Spacer(minLength: 0)
+                    }
+                }
             }
         }
     }
@@ -24,11 +38,11 @@ struct RatingView: View {
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            RatingView(rating: .one)
-            RatingView(rating: .two)
-            RatingView(rating: .three)
-            RatingView(rating: .four)
-            RatingView(rating: .five)
+            RatingView(rating: 1)
+            RatingView(rating: 2.3)
+            RatingView(rating: 3)
+            RatingView(rating: 3.8)
+            RatingView(rating: 5.5)
         }
     }
 }

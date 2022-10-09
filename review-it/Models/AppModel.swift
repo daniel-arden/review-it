@@ -1,6 +1,10 @@
-struct AppModel: Hashable, Identifiable {
-    var id: Int { hashValue }
-    let name: String
+import Foundation
+
+struct AppModel: Identifiable, Hashable {
+    let appIconUrl: URL
+    let appName: String
     let developerName: String
-    let icon: ImageRepresentable
+    let developerUrl: URL
+    let rating: Float
+    let id: Int
 }

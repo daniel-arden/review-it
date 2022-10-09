@@ -23,12 +23,12 @@ struct Review: Decodable, Hashable, Identifiable {
         FormattingService.dateFormatter.date(from: _updated.label)
     }
     var id: String { _id.label }
-    var rating: Rating? {
-        guard let ratingNumber = Int(_rating.label) else {
+    var rating: Float? {
+        guard let ratingNumber = Float(_rating.label) else {
             return nil
         }
 
-        return Rating(rawValue: ratingNumber)
+        return ratingNumber
     }
     var title: String { _title.label }
 }
