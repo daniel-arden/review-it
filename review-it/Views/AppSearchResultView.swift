@@ -8,9 +8,14 @@ struct AppSearchResultView: View {
         VStack {
             HStack {
                 HStack {
-                    AsyncImage(url: appSearchResult.appIconUrl)
-                        .frame(width: 80, height: 80)
-                        .cornerRadius(12)
+                    AsyncImage(url: appSearchResult.appIconUrl) { image in
+                        image
+                            .resizable()
+                    } placeholder: {
+                        Color.backgroundTertiary
+                    }
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(12)
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text(appSearchResult.appName)

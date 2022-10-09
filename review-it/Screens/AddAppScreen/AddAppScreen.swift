@@ -24,7 +24,7 @@ private extension AddAppScreen {
     func resultsView(appSearchResults: [AppSearchResult]) -> some View {
         if !appSearchResults.isEmpty {
             ScrollView {
-                VStack {
+                LazyVStack {
                     ForEach(appSearchResults) { appSearchResult in
                         AppSearchResultView(
                             appSearchResult: appSearchResult
@@ -39,19 +39,24 @@ private extension AddAppScreen {
         }
     }
 
+    @ViewBuilder
     var innerContentView: some View {
-        ZStack {
-            switch addAppScreenVM.searchState {
-            case let .error(error):
-                informationText(error.localizedDescription)
-            case .searching:
+        switch addAppScreenVM.searchState {
+        case let .error(error):
+            informationText(error.localizedDescription)
+        case .searching:
+            VStack {
+                Spacer()
+
                 ProgressView()
                     .progressViewStyle(.circular)
-            case .initial:
-                informationText("Search for apps on the AppStore")
-            case let .results(appSearchResults):
-                resultsView(appSearchResults: appSearchResults)
+
+                Spacer()
             }
+        case .initial:
+            informationText("Search for apps on the AppStore")
+        case let .results(appSearchResults):
+            resultsView(appSearchResults: appSearchResults)
         }
     }
 }
@@ -87,11 +92,16 @@ private extension AddAppScreen {
 
             Spacer()
         }
-        .padding()
-        .frame(
-            maxWidth: 800
-        )
+        .padding([.top, .horizontal])
         .onKeyDown(.escape) { dismiss() }
+        .frame(
+            minWidth: 400,
+            idealWidth: 500,
+            maxWidth: 700,
+            minHeight: 400,
+            idealHeight: 500,
+            maxHeight: 1000
+        )
     }
 }
 #endif

@@ -18,7 +18,6 @@ struct AppCarouselView: View {
         }
         .sheet(isPresented: $addAppPresented) {
             AddAppScreen()
-                .frame(minWidth: 200, minHeight: 200)
         }
     }
 }
