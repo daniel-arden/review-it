@@ -21,17 +21,12 @@ private extension AddAppScreen {
     }
 
     @ViewBuilder
-    func resultsView(appModels: [AppModel]) -> some View {
-        if !appModels.isEmpty {
+    func resultsView(appSearchResults: [AppSearchResult]) -> some View {
+        if !appSearchResults.isEmpty {
             ScrollView {
-                LazyVStack {
-                    ForEach(appModels) { appModel in
-                        AppTileView(
-                            appTileModel: .app(appModel),
-                            action: {
-
-                            }
-                        )
+                VStack {
+                    ForEach(appSearchResults) { appSearchResult in
+                        Text("App Search Result View")
                     }
                 }
             }
@@ -45,10 +40,13 @@ private extension AddAppScreen {
             switch addAppScreenVM.searchState {
             case let .error(error):
                 informationText(error.localizedDescription)
+            case .searching:
+                ProgressView()
+                    .progressViewStyle(.circular)
             case .initial:
                 informationText("Search for apps on the AppStore")
-            case let .results(appModels):
-                resultsView(appModels: appModels)
+            case let .results(appSearchResults):
+                resultsView(appSearchResults: appSearchResults)
             }
         }
     }
