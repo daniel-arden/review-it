@@ -37,7 +37,7 @@ struct AppView: View {
             } placeholder: {
                 Color.backgroundTertiary
             }
-            .frame(width: 80, height: 80)
+            .frame(width: dimension, height: dimension)
             .cornerRadius(12)
 
             VStack(alignment: .leading, spacing: 4) {
@@ -47,6 +47,7 @@ struct AppView: View {
                 Link(developerName, destination: developerUrl)
 
                 Spacer()
+                    .frame(height: 2)
 
                 RatingView(rating: rating)
             }

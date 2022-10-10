@@ -3,29 +3,34 @@ import SwiftUI
 struct AppTileView: View {
     private static let plusIconDimension: CGFloat = 48
     let appTileModel: AppTileModel
+    let isSelected: Bool
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            HStack {
+            Group {
                 switch appTileModel {
                 case .addNew:
-                    addNewContent()
+                    addNewContent
                 case let .app(appModel):
                     AppView(appModel: appModel)
+                        .padding(.horizontal)
                 }
             }
-            .padding()
             .background(Color.backgroundSecondary)
             .cornerRadius(12)
         }
         .buttonStyle(BouncingButtonStyle())
+        .overlay(
+            // FIXME: line cropped vertically in AppCarousel on macOS
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(Color.accentColor, lineWidth: isSelected ? 2 : 0)
+        )
     }
 }
 
 private extension AppTileView {
-    @ViewBuilder
-    func addNewContent() -> some View {
+    var addNewContent: some View {
         HStack {
             Image(systemName: "plus")
                 .resizable()
@@ -43,5 +48,7 @@ private extension AppTileView {
             Text("Add App")
                 .font(.headline)
         }
+        .padding()
+        .frame(maxHeight: .infinity)
     }
 }

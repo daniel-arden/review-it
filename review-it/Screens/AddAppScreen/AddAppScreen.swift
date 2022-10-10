@@ -29,6 +29,7 @@ private extension AddAppScreen {
                         AppSearchResultView(
                             appSearchResult: appSearchResult
                         ) {
+                            addAppScreenVM.addApp(appSearchResult)
                             dismiss()
                         }
                     }

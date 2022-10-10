@@ -3,7 +3,9 @@ import SwiftUI
 
 final class AddAppScreenVM: ObservableObject {
     // MARK: Private Properties
+    private let moc = PersistenceController.shared.container.viewContext
     private let searchService = SearchService.shared
+    private let userSettingsService = UserSettingsService.shared
     private var searchCancellable: AnyCancellable?
 
     // MARK: Public Properties
@@ -12,6 +14,18 @@ final class AddAppScreenVM: ObservableObject {
 
     init() {
         bind()
+    }
+
+    func addApp(_ appSearchResult: AppSearchResult) {
+        let appModel = AppModel(context: moc)
+        appModel.appIconUrl = appSearchResult.appIconUrl
+        appModel.appName = appSearchResult.appName
+        appModel.developerName = appSearchResult.developerName
+        appModel.developerUrl = appSearchResult.developerUrl
+        appModel.rating = appSearchResult.ratingRounded
+        appModel.id = appSearchResult.id
+        appModel.saveDate = .now
+        try? moc.save()
     }
 }
 

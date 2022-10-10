@@ -15,6 +15,7 @@
 		5A13D60128F35E6300A15735 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60028F35E6300A15735 /* AppView.swift */; };
 		5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60328F36FC300A15735 /* PersistenceController.swift */; };
 		5A13D60728F3747F00A15735 /* review-it.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60528F3747F00A15735 /* review-it.xcdatamodeld */; };
+		5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D60928F375DB00A15735 /* UserSettingsService.swift */; };
 		5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F54BE28E9A1AC0038A1CC /* review_itApp.swift */; };
 		5A1F54C328E9A1AE0038A1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1F54C228E9A1AE0038A1CC /* Assets.xcassets */; };
 		5A1F54C728E9A1AE0038A1CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1F54C628E9A1AE0038A1CC /* Preview Assets.xcassets */; };
@@ -41,7 +42,6 @@
 		5A1F552228EA1CD60038A1CC /* AppTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552128EA1CD60038A1CC /* AppTileView.swift */; };
 		5A1F552428EA1CDD0038A1CC /* AppTileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552328EA1CDD0038A1CC /* AppTileModel.swift */; };
 		5A1F552628EA1EE90038A1CC /* Image+ImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */; };
-		5A1F552828EA25A70038A1CC /* AppCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552728EA25A70038A1CC /* AppCarouselView.swift */; };
 		5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */; };
 		5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */; };
 		5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */; };
@@ -75,6 +75,7 @@
 		5A13D60028F35E6300A15735 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		5A13D60328F36FC300A15735 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		5A13D60628F3747F00A15735 /* review-it.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "review-it.xcdatamodel"; sourceTree = "<group>"; };
+		5A13D60928F375DB00A15735 /* UserSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsService.swift; sourceTree = "<group>"; };
 		5A1F54BB28E9A1AC0038A1CC /* review-it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "review-it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1F54BE28E9A1AC0038A1CC /* review_itApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = review_itApp.swift; sourceTree = "<group>"; };
 		5A1F54C228E9A1AE0038A1CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		5A1F552128EA1CD60038A1CC /* AppTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTileView.swift; sourceTree = "<group>"; };
 		5A1F552328EA1CDD0038A1CC /* AppTileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTileModel.swift; sourceTree = "<group>"; };
 		5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+ImageRepresentable.swift"; sourceTree = "<group>"; };
-		5A1F552728EA25A70038A1CC /* AppCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCarouselView.swift; sourceTree = "<group>"; };
 		5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingButtonStyle.swift; sourceTree = "<group>"; };
 		5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreen.swift; sourceTree = "<group>"; };
 		5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreenVM.swift; sourceTree = "<group>"; };
@@ -170,6 +170,14 @@
 				5A13D60328F36FC300A15735 /* PersistenceController.swift */,
 			);
 			path = PersistentController;
+			sourceTree = "<group>";
+		};
+		5A13D60828F375D300A15735 /* UserSettings */ = {
+			isa = PBXGroup;
+			children = (
+				5A13D60928F375DB00A15735 /* UserSettingsService.swift */,
+			);
+			path = UserSettings;
 			sourceTree = "<group>";
 		};
 		5A1F54B228E9A1AC0038A1CC = {
@@ -254,6 +262,7 @@
 		5A1F54F428E9A2570038A1CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5A13D60828F375D300A15735 /* UserSettings */,
 				5A13D60228F36FB900A15735 /* PersistentController */,
 				5A13D5F328F2E2EF00A15735 /* Search */,
 				5A13D5F128F2E0B100A15735 /* Formatting */,
@@ -285,7 +294,6 @@
 			children = (
 				5A1F550228E9A32E0038A1CC /* ReviewCardView.swift */,
 				5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */,
-				5A1F552728EA25A70038A1CC /* AppCarouselView.swift */,
 				5A13D5FE28F30E2400A15735 /* RoundedButtonStyle.swift */,
 				5A1F551528E9C14F0038A1CC /* RatingView.swift */,
 				5A1F552128EA1CD60038A1CC /* AppTileView.swift */,
@@ -469,6 +477,7 @@
 				5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
+				5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */,
 				5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */,
 				5A1F551928E9CCC60038A1CC /* Constants.swift in Sources */,
 				5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */,
@@ -484,7 +493,6 @@
 				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
 				5A13D60128F35E6300A15735 /* AppView.swift in Sources */,
 				5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */,
-				5A1F552828EA25A70038A1CC /* AppCarouselView.swift in Sources */,
 				5A13D5FA28F2E7C400A15735 /* SearchError.swift in Sources */,
 				5A13D5F528F2E2F900A15735 /* SearchService.swift in Sources */,
 				5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */,
