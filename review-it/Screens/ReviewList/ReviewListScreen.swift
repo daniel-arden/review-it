@@ -40,18 +40,20 @@ struct ReviewListScreen: View {
                 }
                 .padding()
             }
+            .overlay {
+                if viewModel.reviews.isEmpty {
+                    Text("Please add apps that you want to observe")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .foregroundColor(.secondary)
+                }
+            }
         }
         .frame(minWidth: 400, minHeight: 400)
-        .task {
-            do {
-                try await viewModel.fetchReviews()
-            } catch {
-                print("Something went wrong: \(error)")
-            }
-            print("Started fetching reviews")
-        }
+        .onAppear(perform: viewModel.fetchReviews)
         .sheet(isPresented: $addAppPresented) {
-            AddAppScreen()
+            AddAppScreen {
+                viewModel.selectLast()
+            }
         }
     }
 }

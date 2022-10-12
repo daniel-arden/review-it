@@ -45,6 +45,7 @@
 		5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */; };
 		5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */; };
 		5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */; };
+		5A20CEA828F756C50006566E /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20CEA728F756C50006566E /* UserDefaultsKey.swift */; };
 		5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */; };
 		5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingButtonStyle.swift; sourceTree = "<group>"; };
 		5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreen.swift; sourceTree = "<group>"; };
 		5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreenVM.swift; sourceTree = "<group>"; };
+		5A20CEA728F756C50006566E /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnKeyDown.swift"; sourceTree = "<group>"; };
 		5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +321,7 @@
 			children = (
 				5A1F551828E9CCC60038A1CC /* Constants.swift */,
 				5A1F551F28EA1A230038A1CC /* ImageRepresentable.swift */,
+				5A20CEA728F756C50006566E /* UserDefaultsKey.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				5A1F551628E9C14F0038A1CC /* RatingView.swift in Sources */,
 				5A1F550328E9A32E0038A1CC /* ReviewCardView.swift in Sources */,
 				5A1F552028EA1A230038A1CC /* ImageRepresentable.swift in Sources */,
+				5A20CEA828F756C50006566E /* UserDefaultsKey.swift in Sources */,
 				5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */,
 				5A1F552228EA1CD60038A1CC /* AppTileView.swift in Sources */,
 				5A13D60728F3747F00A15735 /* review-it.xcdatamodeld in Sources */,

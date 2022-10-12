@@ -3,6 +3,7 @@ import SwiftUI
 struct AddAppScreen: View {
     @StateObject private var addAppScreenVM = AddAppScreenVM()
     @Environment(\.dismiss) private var dismiss
+    let onAppAdded: () -> Void
 
     var body: some View { content }
 }
@@ -30,6 +31,7 @@ private extension AddAppScreen {
                             appSearchResult: appSearchResult
                         ) {
                             addAppScreenVM.addApp(appSearchResult)
+                            onAppAdded()
                             dismiss()
                         }
                     }
@@ -109,6 +111,6 @@ private extension AddAppScreen {
 
 struct AddAppScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AddAppScreen()
+        AddAppScreen {}
     }
 }
