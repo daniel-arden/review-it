@@ -3,6 +3,12 @@ import SwiftUI
 struct AddAppScreen: View {
     @StateObject private var addAppScreenVM = AddAppScreenVM()
     @Environment(\.dismiss) private var dismiss
+
+    @FetchRequest(
+        sortDescriptors: AppModel.sortDescriptors()
+    )
+    private var addedAppModels: FetchedResults<AppModel>
+
     let onAppAdded: () -> Void
 
     var body: some View { content }
@@ -28,7 +34,8 @@ private extension AddAppScreen {
                 LazyVStack {
                     ForEach(appSearchResults) { appSearchResult in
                         AppSearchResultView(
-                            appSearchResult: appSearchResult
+                            appSearchResult: appSearchResult,
+                            isAlreadyAdded: addedAppModels.map(\.id).contains(appSearchResult.id)
                         ) {
                             addAppScreenVM.addApp(appSearchResult)
                             onAppAdded()

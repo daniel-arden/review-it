@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AppSearchResultView: View {
     let appSearchResult: AppSearchResult
+    let isAlreadyAdded: Bool
     let addAction: () -> Void
 
     var body: some View {
@@ -13,6 +14,7 @@ struct AppSearchResultView: View {
 
                 Button("ADD", action: addAction)
                     .buttonStyle(RoundedButtonStyle())
+                    .disabled(isAlreadyAdded)
             }
         }
         .padding()
