@@ -46,8 +46,14 @@
 		5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */; };
 		5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */; };
 		5A20CEA828F756C50006566E /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20CEA728F756C50006566E /* UserDefaultsKey.swift */; };
+		5A20CEAB28F763F20006566E /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20CEAA28F763F20006566E /* SettingsScreen.swift */; };
 		5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */; };
 		5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */; };
+		5AAA330328FCA69E007BCFB1 /* SettingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA330228FCA69E007BCFB1 /* SettingsType.swift */; };
+		5AAD12282901903E00A4F01E /* SettingsScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12272901903E00A4F01E /* SettingsScreenVM.swift */; };
+		5AAD122B2901907D00A4F01E /* SettingsGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122A2901907D00A4F01E /* SettingsGeneralView.swift */; };
+		5AAD122D2901908100A4F01E /* SettingsAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122C2901908100A4F01E /* SettingsAlertsView.swift */; };
+		5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +117,14 @@
 		5A1F552C28EA2F630038A1CC /* AddAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreen.swift; sourceTree = "<group>"; };
 		5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreenVM.swift; sourceTree = "<group>"; };
 		5A20CEA728F756C50006566E /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		5A20CEAA28F763F20006566E /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnKeyDown.swift"; sourceTree = "<group>"; };
 		5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
+		5AAA330228FCA69E007BCFB1 /* SettingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsType.swift; sourceTree = "<group>"; };
+		5AAD12272901903E00A4F01E /* SettingsScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenVM.swift; sourceTree = "<group>"; };
+		5AAD122A2901907D00A4F01E /* SettingsGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGeneralView.swift; sourceTree = "<group>"; };
+		5AAD122C2901908100A4F01E /* SettingsAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAlertsView.swift; sourceTree = "<group>"; };
+		5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +288,7 @@
 		5A1F54FA28E9A2940038A1CC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A20CEA928F763EA0006566E /* Settings */,
 				5A1F552B28EA2F5A0038A1CC /* AddAppScreen */,
 				5A1F54FB28E9A29A0038A1CC /* ReviewList */,
 			);
@@ -333,6 +346,27 @@
 				5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */,
 			);
 			path = AddAppScreen;
+			sourceTree = "<group>";
+		};
+		5A20CEA928F763EA0006566E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5AAD12292901906D00A4F01E /* Views */,
+				5A20CEAA28F763F20006566E /* SettingsScreen.swift */,
+				5AAA330228FCA69E007BCFB1 /* SettingsType.swift */,
+				5AAD12272901903E00A4F01E /* SettingsScreenVM.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5AAD12292901906D00A4F01E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AAD122A2901907D00A4F01E /* SettingsGeneralView.swift */,
+				5AAD122C2901908100A4F01E /* SettingsAlertsView.swift */,
+				5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,17 +517,21 @@
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
 				5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */,
 				5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */,
+				5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */,
 				5A1F551928E9CCC60038A1CC /* Constants.swift in Sources */,
 				5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */,
 				5A13D5FF28F30E2400A15735 /* RoundedButtonStyle.swift in Sources */,
 				5A1F54F128E9A2260038A1CC /* NestedLabelType.swift in Sources */,
+				5AAA330328FCA69E007BCFB1 /* SettingsType.swift in Sources */,
 				5A1F552428EA1CDD0038A1CC /* AppTileModel.swift in Sources */,
 				5A1F54F328E9A23A0038A1CC /* Author.swift in Sources */,
 				5A1F551D28EA19EB0038A1CC /* AppModel.swift in Sources */,
 				5A13D5FD28F2EB5E00A15735 /* AppSearchResultView.swift in Sources */,
+				5AAD122D2901908100A4F01E /* SettingsAlertsView.swift in Sources */,
 				5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */,
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,
 				5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */,
+				5A20CEAB28F763F20006566E /* SettingsScreen.swift in Sources */,
 				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
 				5A13D60128F35E6300A15735 /* AppView.swift in Sources */,
 				5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */,
@@ -501,6 +539,8 @@
 				5A13D5F528F2E2F900A15735 /* SearchService.swift in Sources */,
 				5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */,
 				5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */,
+				5AAD122B2901907D00A4F01E /* SettingsGeneralView.swift in Sources */,
+				5AAD12282901903E00A4F01E /* SettingsScreenVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +712,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danielarden.review-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -710,7 +750,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danielarden.review-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";

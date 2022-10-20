@@ -12,6 +12,11 @@ final class ReviewListVM: ObservableObject {
         }
     }
     @Published private(set) var reviews: [Review] = []
+
+    init() {
+        selectLast()
+        fetchReviews()
+    }
 }
 
 extension ReviewListVM {

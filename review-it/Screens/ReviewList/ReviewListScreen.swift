@@ -17,8 +17,12 @@ struct ReviewListScreen: View {
     )
     private var appModels: FetchedResults<AppModel>
 
-    var body: some View {
-        VStack {
+    var body: some View  { content }
+}
+
+private extension ReviewListScreen {
+    var innerContentView: some View {
+        VStack(spacing: 0) {
             VStack(spacing: 0) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     ScrollViewReader { proxy in
@@ -82,7 +86,6 @@ struct ReviewListScreen: View {
             .refreshable { viewModel.fetchReviews() }
         }
         .frame(minWidth: 400, minHeight: 400)
-        .onAppear(perform: viewModel.fetchReviews)
         .sheet(isPresented: $addAppPresented) {
             AddAppScreen {
                 viewModel.selectLast()
@@ -91,6 +94,41 @@ struct ReviewListScreen: View {
         }
     }
 }
+
+#if os(iOS)
+// MARK: - iOS Views
+private extension ReviewListScreen {
+    var content: some View {
+        NavigationStack {
+            innerContentView
+                .toolbar {
+                    ToolbarItem {
+                        HStack(spacing: 0) {
+                            Button {
+                                addAppPresented.toggle()
+                            } label: {
+                                Image(systemName: "plus")
+                            }
+                            .frame(width: 40, height: 40)
+
+                            NavigationLink {
+                                SettingsScreen()
+                            } label: {
+                                Image(systemName: "gear")
+                            }
+                            .frame(width: 40, height: 40)
+                        }
+                    }
+                }
+        }
+    }
+}
+#elseif os(macOS)
+// MARK: - MacOS Views
+private extension ReviewListScreen {
+    var content: some View { innerContentView }
+}
+#endif
 
 struct ReviewListScreen_Previews: PreviewProvider {
     static var previews: some View {

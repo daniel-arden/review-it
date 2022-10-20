@@ -10,5 +10,11 @@ struct review_itApp: App {
                      PersistenceController.shared.container.viewContext
                 )
         }
+
+        #if os(macOS)
+        Settings {
+            SettingsScreen()
+        }
+        #endif
     }
 }
