@@ -54,6 +54,8 @@
 		5AAD122B2901907D00A4F01E /* SettingsGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122A2901907D00A4F01E /* SettingsGeneralView.swift */; };
 		5AAD122D2901908100A4F01E /* SettingsAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122C2901908100A4F01E /* SettingsAlertsView.swift */; };
 		5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */; };
+		5AAD12312901A61A00A4F01E /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12302901A61A00A4F01E /* Platform.swift */; };
+		5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		5AAD122A2901907D00A4F01E /* SettingsGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGeneralView.swift; sourceTree = "<group>"; };
 		5AAD122C2901908100A4F01E /* SettingsAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAlertsView.swift; sourceTree = "<group>"; };
 		5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAccountView.swift; sourceTree = "<group>"; };
+		5AAD12302901A61A00A4F01E /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformPadding.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1F550528E9A33A0038A1CC /* Color+Convenience.swift */,
+				5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */,
 				5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */,
 				5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */,
 			);
@@ -335,6 +340,7 @@
 				5A1F551828E9CCC60038A1CC /* Constants.swift */,
 				5A1F551F28EA1A230038A1CC /* ImageRepresentable.swift */,
 				5A20CEA728F756C50006566E /* UserDefaultsKey.swift */,
+				5AAD12302901A61A00A4F01E /* Platform.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAD12312901A61A00A4F01E /* Platform.swift in Sources */,
 				5A1F550628E9A33A0038A1CC /* Color+Convenience.swift in Sources */,
 				5A13D5F828F2E36900A15735 /* AppSearchResult.swift in Sources */,
 				5A1F54EF28E9A2140038A1CC /* Review.swift in Sources */,
@@ -513,6 +520,7 @@
 				5A1F552228EA1CD60038A1CC /* AppTileView.swift in Sources */,
 				5A13D60728F3747F00A15735 /* review-it.xcdatamodeld in Sources */,
 				5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */,
+				5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
 				5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */,

@@ -1,16 +1,19 @@
 import SwiftUI
 
 struct SettingsGeneralView: View {
-    @EnvironmentObject private var settingsVM: SettingsScreenVM
+    @ObservedObject var userSettings = UserSettingsService.shared
 
     var body: some View {
-        Text("General Screen")
+        VStack(spacing: 16) {
+            Toggle("Show controls and filters", isOn: userSettings.$reviewListControls)
+            Toggle("Highlight unseen reviews", isOn: userSettings.$newReviewsHighlighted)
+        }
+        .padding(platform: .macOS)
     }
 }
 
 struct SettingsGeneralView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsGeneralView()
-            .environmentObject(SettingsScreenVM())
     }
 }

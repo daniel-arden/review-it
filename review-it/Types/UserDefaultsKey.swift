@@ -7,6 +7,13 @@ extension UserDefaults {
      */
     enum Key {
         static let selectedAppId = "selectedAppId"
+
+        // MARK: - User Settings
+        /// ReviewListScreen controls' visibility
+        static let reviewListControls = "reviewListControls"
+
+        /// ReviewListScreen's highlighted appearance for new reviews
+        static let newReviewsHighlighted = "newReviewsHighlighted"
     }
 }
 
