@@ -4,7 +4,8 @@ struct SettingsAlertsView: View {
     @EnvironmentObject private var settingsVM: SettingsScreenVM
 
     var body: some View {
-        Text("Alerts Screen")
+        Text("Alerts are currently not available. Coming soon!")
+            .padding(.macOS)
     }
 }
 

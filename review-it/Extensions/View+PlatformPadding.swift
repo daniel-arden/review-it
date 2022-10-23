@@ -6,31 +6,9 @@ private struct PlatformPadding: ViewModifier {
     let length: CGFloat?
 
     func body(content: Content) -> some View {
-        if platform == .iOS {
-            #if os(iOS)
+        if Platform.current == platform {
             content.padding(edges, length)
-            #endif
-            content
-        }
-
-        if platform == .macOS {
-            #if os(macOS)
-            content.padding(edges, length)
-            #endif
-            content
-        }
-
-        if platform == .tvOS {
-            #if os(tvOS)
-            content.padding(edges, length)
-            #endif
-            content
-        }
-
-        if platform == .watchOS {
-            #if os(macOS)
-            content.padding(edges, length)
-            #endif
+        } else {
             content
         }
     }
@@ -38,9 +16,9 @@ private struct PlatformPadding: ViewModifier {
 
 extension View {
     func padding(
-        platform: Platform = .all,
-        edges: Edge.Set = .all,
-        length: CGFloat? = nil
+        _ platform: Platform = .all,
+        _ edges: Edge.Set = .all,
+        _ length: CGFloat? = nil
     ) -> some View {
         modifier(
             PlatformPadding(

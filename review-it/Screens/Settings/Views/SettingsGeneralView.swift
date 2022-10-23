@@ -8,7 +8,7 @@ struct SettingsGeneralView: View {
             Toggle("Show controls and filters", isOn: userSettings.$reviewListControls)
             Toggle("Highlight unseen reviews", isOn: userSettings.$newReviewsHighlighted)
         }
-        .padding(platform: .macOS)
+        .padding(.macOS)
     }
 }
 

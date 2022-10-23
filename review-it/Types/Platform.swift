@@ -27,4 +27,18 @@ struct Platform: OptionSet {
     mutating func formSymmetricDifference(_ other: __owned Platform) {
         self = self.symmetricDifference(other)
     }
+
+    static var current: Platform {
+        #if os(iOS)
+        return .iOS
+        #elseif os(macOS)
+        return .macOS
+        #elseif os(tvOS)
+        return .tvOS
+        #elseif os(watchOS)
+        return .watchOS
+        #else
+        fatalError("Unknown platform. Make sure you are running the code on iOS, macOS, tvOS or watchOS")
+        #endif
+    }
 }
