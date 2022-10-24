@@ -30,7 +30,7 @@ private extension Scene {
                     NSApplication.shared.orderFrontStandardAboutPanel(
                         options: [
                             NSApplication.AboutPanelOptionKey.credits: NSAttributedString(
-                                string: "Some custom info about my app.",
+                                string: "Made with love ❤️",
                                 attributes: [
                                     NSAttributedString.Key.font: NSFont.boldSystemFont(
                                         ofSize: NSFont.smallSystemFontSize)
