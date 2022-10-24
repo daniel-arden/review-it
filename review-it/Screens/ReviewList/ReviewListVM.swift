@@ -3,11 +3,15 @@ import SwiftUI
 
 final class ReviewListVM: ObservableObject {
     private let apiService = APIService.shared
-    private let moc = PersistenceController.shared.container.viewContext
+    private let moc = PersistenceController.shared.moc
 
     @AppStorage(UserDefaults.Key.selectedAppId) var selectedAppId: Int? {
         didSet {
             guard selectedAppId != oldValue else { return }
+            guard selectedAppId != nil else {
+                removeReviews()
+                return
+            }
             fetchReviews()
         }
     }
@@ -34,6 +38,10 @@ extension ReviewListVM {
                 reviews = reviewFeed.reviews
             }
         }
+    }
+
+    func removeReviews() {
+        reviews = []
     }
 
     func selectLast() {

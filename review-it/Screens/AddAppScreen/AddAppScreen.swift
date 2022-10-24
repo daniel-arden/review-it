@@ -37,9 +37,13 @@ private extension AddAppScreen {
                             appSearchResult: appSearchResult,
                             isAlreadyAdded: addedAppModels.map(\.id).contains(appSearchResult.id)
                         ) {
-                            addAppScreenVM.addApp(appSearchResult)
-                            onAppAdded()
-                            dismiss()
+                            do {
+                                try addAppScreenVM.addApp(appSearchResult)
+                                onAppAdded()
+                                dismiss()
+                            } catch {
+                                fatalError("Handle this: adding an item failed")
+                            }
                         }
                     }
                 }

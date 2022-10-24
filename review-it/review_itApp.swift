@@ -2,19 +2,19 @@ import SwiftUI
 
 @main
 struct review_itApp: App {
+    @StateObject private var appReloadService = AppReloadService()
+
     var body: some Scene {
         WindowGroup {
-            ReviewListScreen()
-                .environment(
-                    \.managedObjectContext,
-                     PersistenceController.shared.container.viewContext
-                )
+            MainScreen()
+                .environmentObject(appReloadService)
         }
         .applyCommands()
 
         #if os(macOS)
         Settings {
             SettingsScreen()
+                .environmentObject(appReloadService)
         }
         #endif
     }

@@ -47,6 +47,9 @@
 		5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */; };
 		5A20CEA828F756C50006566E /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20CEA728F756C50006566E /* UserDefaultsKey.swift */; };
 		5A20CEAB28F763F20006566E /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20CEAA28F763F20006566E /* SettingsScreen.swift */; };
+		5A316E3C290602EC00AFDC47 /* PersistenceControllerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A316E3B290602EC00AFDC47 /* PersistenceControllerError.swift */; };
+		5A316E3F2906133100AFDC47 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A316E3E2906133100AFDC47 /* MainScreen.swift */; };
+		5A316E442906156A00AFDC47 /* AppReloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A316E432906156A00AFDC47 /* AppReloadService.swift */; };
 		5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */; };
 		5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */; };
 		5AAA330328FCA69E007BCFB1 /* SettingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA330228FCA69E007BCFB1 /* SettingsType.swift */; };
@@ -120,6 +123,9 @@
 		5A1F552E28EA302C0038A1CC /* AddAppScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppScreenVM.swift; sourceTree = "<group>"; };
 		5A20CEA728F756C50006566E /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		5A20CEAA28F763F20006566E /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		5A316E3B290602EC00AFDC47 /* PersistenceControllerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerError.swift; sourceTree = "<group>"; };
+		5A316E3E2906133100AFDC47 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		5A316E432906156A00AFDC47 /* AppReloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReloadService.swift; sourceTree = "<group>"; };
 		5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnKeyDown.swift"; sourceTree = "<group>"; };
 		5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 		5AAA330228FCA69E007BCFB1 /* SettingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsType.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				5A13D60328F36FC300A15735 /* PersistenceController.swift */,
+				5A316E3B290602EC00AFDC47 /* PersistenceControllerError.swift */,
 			);
 			path = PersistentController;
 			sourceTree = "<group>";
@@ -280,6 +287,7 @@
 		5A1F54F428E9A2570038A1CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5A316E422906155E00AFDC47 /* AppReload */,
 				5A13D60828F375D300A15735 /* UserSettings */,
 				5A13D60228F36FB900A15735 /* PersistentController */,
 				5A13D5F328F2E2EF00A15735 /* Search */,
@@ -292,6 +300,7 @@
 		5A1F54FA28E9A2940038A1CC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A316E3D2906132B00AFDC47 /* Main */,
 				5A20CEA928F763EA0006566E /* Settings */,
 				5A1F552B28EA2F5A0038A1CC /* AddAppScreen */,
 				5A1F54FB28E9A29A0038A1CC /* ReviewList */,
@@ -363,6 +372,22 @@
 				5AAD12272901903E00A4F01E /* SettingsScreenVM.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		5A316E3D2906132B00AFDC47 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5A316E3E2906133100AFDC47 /* MainScreen.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5A316E422906155E00AFDC47 /* AppReload */ = {
+			isa = PBXGroup;
+			children = (
+				5A316E432906156A00AFDC47 /* AppReloadService.swift */,
+			);
+			path = AppReload;
 			sourceTree = "<group>";
 		};
 		5AAD12292901906D00A4F01E /* Views */ = {
@@ -526,6 +551,7 @@
 				5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */,
 				5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */,
 				5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */,
+				5A316E3C290602EC00AFDC47 /* PersistenceControllerError.swift in Sources */,
 				5A1F551928E9CCC60038A1CC /* Constants.swift in Sources */,
 				5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */,
 				5A13D5FF28F30E2400A15735 /* RoundedButtonStyle.swift in Sources */,
@@ -547,6 +573,8 @@
 				5A13D5F528F2E2F900A15735 /* SearchService.swift in Sources */,
 				5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */,
 				5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */,
+				5A316E442906156A00AFDC47 /* AppReloadService.swift in Sources */,
+				5A316E3F2906133100AFDC47 /* MainScreen.swift in Sources */,
 				5AAD122B2901907D00A4F01E /* SettingsGeneralView.swift in Sources */,
 				5AAD12282901903E00A4F01E /* SettingsScreenVM.swift in Sources */,
 			);
