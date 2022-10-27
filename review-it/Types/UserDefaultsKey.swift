@@ -7,6 +7,7 @@ extension UserDefaults {
      */
     enum Key {
         static let selectedAppId = "selectedAppId"
+        static let selectedCountryCode = "selectedCountryCode"
 
         // MARK: - User Settings
         /// ReviewListScreen controls' visibility

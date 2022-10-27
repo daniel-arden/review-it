@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ReviewListScreen: View {
     @StateObject private var viewModel = ReviewListVM()
+    @ObservedObject private var userSettings = UserSettingsService.shared
+
     @State private var addAppPresented = false
 
     @State private var shouldScrollAppListToFirst = UUID()
@@ -23,7 +25,7 @@ struct ReviewListScreen: View {
 private extension ReviewListScreen {
     var innerContentView: some View {
         VStack(spacing: 0) {
-            VStack(spacing: 0) {
+            LazyVStack(spacing: 0) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     ScrollViewReader { proxy in
                         HStack {
@@ -55,6 +57,22 @@ private extension ReviewListScreen {
                 Divider()
             }
             .fixedSize(horizontal: false, vertical: true)
+
+            if userSettings.reviewListControls {
+                HStack {
+                    Picker("", selection: viewModel.$selectedCountryCode) {
+                        ForEach(Locale.countryModels) { countryModel in
+                            Text(countryModel.fullDescription)
+                        }
+                    }
+                    .fixedSize()
+
+                    Spacer()
+                }
+                .padding()
+            }
+
+            Divider()
 
             ScrollView {
                 ScrollViewReader { proxy in

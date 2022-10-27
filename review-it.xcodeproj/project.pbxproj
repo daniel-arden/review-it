@@ -50,6 +50,11 @@
 		5A316E3C290602EC00AFDC47 /* PersistenceControllerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A316E3B290602EC00AFDC47 /* PersistenceControllerError.swift */; };
 		5A316E3F2906133100AFDC47 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A316E3E2906133100AFDC47 /* MainScreen.swift */; };
 		5A316E442906156A00AFDC47 /* AppReloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A316E432906156A00AFDC47 /* AppReloadService.swift */; };
+		5A426D952906926500529F2F /* Locale+CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D942906926500529F2F /* Locale+CountryModel.swift */; };
+		5A426D97290699DF00529F2F /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D96290699DF00529F2F /* CountryModel.swift */; };
+		5A426D9929069B9E00529F2F /* CountryCode+CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D9829069B9E00529F2F /* CountryCode+CountryName.swift */; };
+		5A426D9B29069BB000529F2F /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D9A29069BB000529F2F /* CountryCode.swift */; };
+		5A426D9D29069BB400529F2F /* CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D9C29069BB400529F2F /* CountryName.swift */; };
 		5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */; };
 		5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */; };
 		5AAA330328FCA69E007BCFB1 /* SettingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA330228FCA69E007BCFB1 /* SettingsType.swift */; };
@@ -126,6 +131,11 @@
 		5A316E3B290602EC00AFDC47 /* PersistenceControllerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerError.swift; sourceTree = "<group>"; };
 		5A316E3E2906133100AFDC47 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		5A316E432906156A00AFDC47 /* AppReloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReloadService.swift; sourceTree = "<group>"; };
+		5A426D942906926500529F2F /* Locale+CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+CountryModel.swift"; sourceTree = "<group>"; };
+		5A426D96290699DF00529F2F /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		5A426D9829069B9E00529F2F /* CountryCode+CountryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryCode+CountryName.swift"; sourceTree = "<group>"; };
+		5A426D9A29069BB000529F2F /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
+		5A426D9C29069BB400529F2F /* CountryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryName.swift; sourceTree = "<group>"; };
 		5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnKeyDown.swift"; sourceTree = "<group>"; };
 		5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 		5AAA330228FCA69E007BCFB1 /* SettingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsType.swift; sourceTree = "<group>"; };
@@ -273,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */,
+				5A426D96290699DF00529F2F /* CountryModel.swift */,
 				5A1F54F228E9A23A0038A1CC /* Author.swift */,
 				5A13D5F728F2E36900A15735 /* AppSearchResult.swift */,
 				5A1F54EC28E9A2090038A1CC /* Feed.swift */,
@@ -336,7 +347,9 @@
 			isa = PBXGroup;
 			children = (
 				5A1F550528E9A33A0038A1CC /* Color+Convenience.swift */,
+				5A426D9829069B9E00529F2F /* CountryCode+CountryName.swift */,
 				5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */,
+				5A426D942906926500529F2F /* Locale+CountryModel.swift */,
 				5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */,
 				5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */,
 			);
@@ -348,6 +361,8 @@
 			children = (
 				5A1F551828E9CCC60038A1CC /* Constants.swift */,
 				5A1F551F28EA1A230038A1CC /* ImageRepresentable.swift */,
+				5A426D9A29069BB000529F2F /* CountryCode.swift */,
+				5A426D9C29069BB400529F2F /* CountryName.swift */,
 				5A20CEA728F756C50006566E /* UserDefaultsKey.swift */,
 				5AAD12302901A61A00A4F01E /* Platform.swift */,
 			);
@@ -533,6 +548,7 @@
 			files = (
 				5AAD12312901A61A00A4F01E /* Platform.swift in Sources */,
 				5A1F550628E9A33A0038A1CC /* Color+Convenience.swift in Sources */,
+				5A426D97290699DF00529F2F /* CountryModel.swift in Sources */,
 				5A13D5F828F2E36900A15735 /* AppSearchResult.swift in Sources */,
 				5A1F54EF28E9A2140038A1CC /* Review.swift in Sources */,
 				5A1F54FD28E9A2DB0038A1CC /* ReviewListScreen.swift in Sources */,
@@ -553,6 +569,7 @@
 				5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */,
 				5A316E3C290602EC00AFDC47 /* PersistenceControllerError.swift in Sources */,
 				5A1F551928E9CCC60038A1CC /* Constants.swift in Sources */,
+				5A426D9D29069BB400529F2F /* CountryName.swift in Sources */,
 				5A1F54BF28E9A1AC0038A1CC /* review_itApp.swift in Sources */,
 				5A13D5FF28F30E2400A15735 /* RoundedButtonStyle.swift in Sources */,
 				5A1F54F128E9A2260038A1CC /* NestedLabelType.swift in Sources */,
@@ -563,14 +580,17 @@
 				5A13D5FD28F2EB5E00A15735 /* AppSearchResultView.swift in Sources */,
 				5AAD122D2901908100A4F01E /* SettingsAlertsView.swift in Sources */,
 				5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */,
+				5A426D9B29069BB000529F2F /* CountryCode.swift in Sources */,
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,
 				5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */,
+				5A426D9929069B9E00529F2F /* CountryCode+CountryName.swift in Sources */,
 				5A20CEAB28F763F20006566E /* SettingsScreen.swift in Sources */,
 				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
 				5A13D60128F35E6300A15735 /* AppView.swift in Sources */,
 				5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */,
 				5A13D5FA28F2E7C400A15735 /* SearchError.swift in Sources */,
 				5A13D5F528F2E2F900A15735 /* SearchService.swift in Sources */,
+				5A426D952906926500529F2F /* Locale+CountryModel.swift in Sources */,
 				5A1F54F828E9A27A0038A1CC /* APIError.swift in Sources */,
 				5A1F552D28EA2F630038A1CC /* AddAppScreen.swift in Sources */,
 				5A316E442906156A00AFDC47 /* AppReloadService.swift in Sources */,
