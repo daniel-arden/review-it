@@ -1,8 +1,10 @@
 import Foundation
 
 extension Locale {
+    static let countryCodes = NSLocale.isoCountryCodes
+
     static let countryModels: [CountryModel] = {
-        NSLocale.isoCountryCodes.compactMap { countryCode in
+        countryCodes.compactMap { countryCode in
             let countryCode = countryCode as CountryCode
 
             if let countryName = countryCode.countryName {

@@ -5,7 +5,6 @@ final class ReviewListVM: ObservableObject {
     private let apiService = APIService.shared
     private let moc = PersistenceController.shared.moc
 
-    @AppStorage(UserDefaults.Key.selectedCountryCode) var selectedCountryCode: CountryCode = "us"
     @AppStorage(UserDefaults.Key.selectedAppId) var selectedAppId: Int? {
         didSet {
             guard selectedAppId != oldValue else { return }
@@ -16,6 +15,8 @@ final class ReviewListVM: ObservableObject {
             fetchReviews()
         }
     }
+
+    @AppStorage(UserDefaults.Key.recentCountryFilters) var recentCountryFilters: [CountryFilter] = []
     @Published private(set) var reviews: [Review] = []
 
     init() {

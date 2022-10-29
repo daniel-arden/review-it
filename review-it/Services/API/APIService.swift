@@ -2,7 +2,7 @@ import Foundation
 
 final class APIService {
     static let shared = APIService()
-    private lazy var decoder = JSONDecoder()
+    private let decoder = FormattersCoders.jsonDecoder
 
     func getRequest<T: Decodable>(urlString: String) async throws -> T {
         guard let url = URL(string: urlString) else {

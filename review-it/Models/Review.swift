@@ -20,7 +20,7 @@ struct Review: Decodable, Hashable, Identifiable {
     var authorName: String { _author.name.label }
     var caption: String { _content.label }
     var dateUpdated: Date? {
-        FormattingService.dateFormatter.date(from: _updated.label)
+        FormattersCoders.dateFormatter.date(from: _updated.label)
     }
     var id: String { _id.label }
     var rating: Float? {

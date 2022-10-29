@@ -7,7 +7,6 @@ extension UserDefaults {
      */
     enum Key {
         static let selectedAppId = "selectedAppId"
-        static let selectedCountryCode = "selectedCountryCode"
 
         // MARK: - User Settings
         /// ReviewListScreen controls' visibility
@@ -15,6 +14,12 @@ extension UserDefaults {
 
         /// ReviewListScreen's highlighted appearance for new reviews
         static let newReviewsHighlighted = "newReviewsHighlighted"
+
+        /// Country codes that were recently selected as filters
+        static let recentCountryFilters = "recentCountryFilters"
+
+        /// Currently Selected country filter
+        static let selectedCountryFilter = "selectedCountryFilter"
     }
 }
 

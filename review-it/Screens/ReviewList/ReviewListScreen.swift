@@ -60,9 +60,15 @@ private extension ReviewListScreen {
 
             if userSettings.reviewListControls {
                 HStack {
-                    Picker("", selection: viewModel.$selectedCountryCode) {
-                        ForEach(Locale.countryModels) { countryModel in
-                            Text(countryModel.fullDescription)
+                    Picker("", selection: $userSettings.selectedCountryFilter) {
+                        ForEach(CountryFilter.allCases) { countryFilter in
+                            switch countryFilter {
+                            case .all:
+                                Text("All")
+                                    .id("all")
+                            case let .country(countryModel):
+                                Text(countryModel.fullDescription)
+                            }
                         }
                     }
                     .fixedSize()

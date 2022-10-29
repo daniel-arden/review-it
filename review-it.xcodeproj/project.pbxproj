@@ -64,6 +64,8 @@
 		5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */; };
 		5AAD12312901A61A00A4F01E /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12302901A61A00A4F01E /* Platform.swift */; };
 		5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */; };
+		5AC43F02290B3B9B00BD4850 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */; };
+		5AC43F04290B3C8E00BD4850 /* CountryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		5AAD122E2901908B00A4F01E /* SettingsAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAccountView.swift; sourceTree = "<group>"; };
 		5AAD12302901A61A00A4F01E /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformPadding.swift"; sourceTree = "<group>"; };
+		5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
+		5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 			children = (
 				5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */,
 				5A426D96290699DF00529F2F /* CountryModel.swift */,
+				5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */,
 				5A1F54F228E9A23A0038A1CC /* Author.swift */,
 				5A13D5F728F2E36900A15735 /* AppSearchResult.swift */,
 				5A1F54EC28E9A2090038A1CC /* Feed.swift */,
@@ -352,6 +357,7 @@
 				5A426D942906926500529F2F /* Locale+CountryModel.swift */,
 				5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */,
 				5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */,
+				5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -561,6 +567,7 @@
 				5A1F552228EA1CD60038A1CC /* AppTileView.swift in Sources */,
 				5A13D60728F3747F00A15735 /* review-it.xcdatamodeld in Sources */,
 				5A1F552F28EA302C0038A1CC /* AddAppScreenVM.swift in Sources */,
+				5AC43F02290B3B9B00BD4850 /* Array+RawRepresentable.swift in Sources */,
 				5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
@@ -585,6 +592,7 @@
 				5A1F54EB28E9A1FE0038A1CC /* ReviewFeed.swift in Sources */,
 				5A426D9929069B9E00529F2F /* CountryCode+CountryName.swift in Sources */,
 				5A20CEAB28F763F20006566E /* SettingsScreen.swift in Sources */,
+				5AC43F04290B3C8E00BD4850 /* CountryFilter.swift in Sources */,
 				5A1F550F28E9BCEE0038A1CC /* FormattingService.swift in Sources */,
 				5A13D60128F35E6300A15735 /* AppView.swift in Sources */,
 				5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */,
