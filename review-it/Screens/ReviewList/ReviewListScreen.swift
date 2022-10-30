@@ -59,23 +59,8 @@ private extension ReviewListScreen {
             .fixedSize(horizontal: false, vertical: true)
 
             if userSettings.reviewListControls {
-                HStack {
-                    Picker("", selection: $userSettings.selectedCountryFilter) {
-                        ForEach(CountryFilter.allCases) { countryFilter in
-                            switch countryFilter {
-                            case .all:
-                                Text("All")
-                                    .id("all")
-                            case let .country(countryModel):
-                                Text(countryModel.fullDescription)
-                            }
-                        }
-                    }
-                    .fixedSize()
-
-                    Spacer()
-                }
-                .padding()
+                CountryPicker()
+                    .padding()
             }
 
             Divider()

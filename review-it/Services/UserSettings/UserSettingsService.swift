@@ -31,6 +31,10 @@ extension UserSettingsService {
 
         guard countryFilter != .all else { return }
 
+        if recentCountryFilters.contains(countryFilter) {
+            recentCountryFilters.removeAll { $0 == countryFilter }
+        }
+
         if recentCountryFilters.count == 5 {
             var result = recentCountryFilters.dropLast()
             result.insert(countryFilter, at: 0)

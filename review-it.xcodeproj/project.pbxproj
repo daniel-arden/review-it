@@ -66,6 +66,7 @@
 		5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */; };
 		5AC43F02290B3B9B00BD4850 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */; };
 		5AC43F04290B3C8E00BD4850 /* CountryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */; };
+		5AC479E3290DD7260025E592 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC479E2290DD7260025E592 /* CountryPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformPadding.swift"; sourceTree = "<group>"; };
 		5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
 		5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFilter.swift; sourceTree = "<group>"; };
+		5AC479E2290DD7260025E592 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +346,7 @@
 				5A13D60028F35E6300A15735 /* AppView.swift */,
 				5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */,
 				5A13D5FC28F2EB5E00A15735 /* AppSearchResultView.swift */,
+				5AC479E2290DD7260025E592 /* CountryPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				5A1F551D28EA19EB0038A1CC /* AppModel.swift in Sources */,
 				5A13D5FD28F2EB5E00A15735 /* AppSearchResultView.swift in Sources */,
 				5AAD122D2901908100A4F01E /* SettingsAlertsView.swift in Sources */,
+				5AC479E3290DD7260025E592 /* CountryPicker.swift in Sources */,
 				5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */,
 				5A426D9B29069BB000529F2F /* CountryCode.swift in Sources */,
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,
