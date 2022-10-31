@@ -24,12 +24,16 @@ struct SeenStatusFilterPicker: View {
             Text(userSettings.seenStatusFilter.rawValue.capitalized)
                 .font(.headline)
                 .foregroundColor(.accentColor)
-                .padding(.horizontal, 24)
-                .padding(.vertical, 8)
-                .background(Color.gray.opacity(0.1))
-                .cornerRadius(.infinity)
-        }
 
+        }
+        .menuStyle(.borderlessButton)
+        .padding(.horizontal, 24)
+        .padding(.vertical, 8)
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(.infinity)
+        .transaction { transaction in
+            transaction.animation = nil
+        }
     }
 }
 

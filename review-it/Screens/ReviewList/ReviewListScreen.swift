@@ -59,7 +59,7 @@ private extension ReviewListScreen {
             .fixedSize(horizontal: false, vertical: true)
 
             if userSettings.reviewListControls {
-                ScrollView(.horizontal) {
+                ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
                         CountryFilterPicker()
                         SeenStatusFilterPicker()
