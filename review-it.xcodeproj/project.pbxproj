@@ -55,6 +55,7 @@
 		5A426D9929069B9E00529F2F /* CountryCode+CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D9829069B9E00529F2F /* CountryCode+CountryName.swift */; };
 		5A426D9B29069BB000529F2F /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D9A29069BB000529F2F /* CountryCode.swift */; };
 		5A426D9D29069BB400529F2F /* CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A426D9C29069BB400529F2F /* CountryName.swift */; };
+		5A4DA0742910436E00D8DB0F /* View+ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DA0732910436E00D8DB0F /* View+ConditionalModifier.swift */; };
 		5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */; };
 		5A58C61B28EE34BD008C47D0 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */; };
 		5AAA330328FCA69E007BCFB1 /* SettingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA330228FCA69E007BCFB1 /* SettingsType.swift */; };
@@ -144,6 +145,7 @@
 		5A426D9829069B9E00529F2F /* CountryCode+CountryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryCode+CountryName.swift"; sourceTree = "<group>"; };
 		5A426D9A29069BB000529F2F /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
 		5A426D9C29069BB400529F2F /* CountryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryName.swift; sourceTree = "<group>"; };
+		5A4DA0732910436E00D8DB0F /* View+ConditionalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ConditionalModifier.swift"; sourceTree = "<group>"; };
 		5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnKeyDown.swift"; sourceTree = "<group>"; };
 		5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 		5AAA330228FCA69E007BCFB1 /* SettingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsType.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				5A426D9829069B9E00529F2F /* CountryCode+CountryName.swift */,
 				5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */,
 				5A426D942906926500529F2F /* Locale+CountryModel.swift */,
+				5A4DA0732910436E00D8DB0F /* View+ConditionalModifier.swift */,
 				5A58C61828EE2A33008C47D0 /* View+OnKeyDown.swift */,
 				5A1F552528EA1EE90038A1CC /* Image+ImageRepresentable.swift */,
 				5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */,
@@ -580,6 +583,7 @@
 				5A1F551628E9C14F0038A1CC /* RatingView.swift in Sources */,
 				5ACCA07A290F7D410047BA82 /* ViewState.swift in Sources */,
 				5A1F550328E9A32E0038A1CC /* ReviewCardView.swift in Sources */,
+				5A4DA0742910436E00D8DB0F /* View+ConditionalModifier.swift in Sources */,
 				5A1F552028EA1A230038A1CC /* ImageRepresentable.swift in Sources */,
 				5A20CEA828F756C50006566E /* UserDefaultsKey.swift in Sources */,
 				5A58C61928EE2A33008C47D0 /* View+OnKeyDown.swift in Sources */,

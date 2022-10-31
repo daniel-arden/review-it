@@ -4,6 +4,7 @@ struct ReviewListScreen: View {
     @StateObject private var viewModel = ReviewListVM()
     @ObservedObject private var userSettings = UserSettingsService.shared
 
+    @State private var isEditing = false
     @State private var addAppPresented = false
 
     @State private var shouldScrollAppListToFirst = UUID()
@@ -40,12 +41,24 @@ private extension ReviewListScreen {
                                 }
 
                             ForEach(appModels.map { AppTileModel.app($0) } ) { tileModel in
-                                AppTileView(appTileModel: tileModel, isSelected: viewModel.selectedAppId == tileModel.id ) {
+                                AppTileView(
+                                    appTileModel: tileModel,
+                                    isSelected: viewModel.selectedAppId == tileModel.id,
+                                    isEditing: isEditing
+                                ) {
                                     viewModel.selectedAppId = tileModel.id
+                                } onDelete: {
+                                    if case let .app(appModel) = tileModel {
+                                        viewModel.removeApp(appModel)
+                                    }
+
+                                    if appModels.isEmpty {
+                                        isEditing = false
+                                    }
                                 }
                             }
 
-                            AppTileView(appTileModel: .addNew, isSelected: false) {
+                            AppTileView(appTileModel: .addNew, isSelected: false, isEditing: false) {
                                 addAppPresented.toggle()
                             }
                         }
@@ -57,6 +70,7 @@ private extension ReviewListScreen {
                 Divider()
             }
             .fixedSize(horizontal: false, vertical: true)
+            .toolbar { editButton }
 
             if userSettings.reviewListControls {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -110,6 +124,17 @@ private extension ReviewListScreen {
             AddAppScreen {
                 viewModel.selectLast()
                 shouldScrollAppListToFirst = UUID()
+            }
+        }
+    }
+}
+
+private extension ReviewListScreen {
+    @ViewBuilder
+    var editButton: some View {
+        if !appModels.isEmpty {
+            Button(isEditing ? "Done" : "Edit") {
+                isEditing.toggle()
             }
         }
     }

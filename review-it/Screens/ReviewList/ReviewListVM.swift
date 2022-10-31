@@ -71,4 +71,12 @@ extension ReviewListVM {
             }
         }
     }
+
+    func removeApp(_ appModel: AppModel) {
+        withAnimation {
+            moc.delete(appModel)
+            try? moc.save()
+            selectLast()
+        }
+    }
 }
