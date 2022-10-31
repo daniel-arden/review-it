@@ -5,7 +5,7 @@ final class AppModel: NSManagedObject, Identifiable {
     @NSManaged var appIconUrl: URL
     @NSManaged var appName: String
     @NSManaged var developerName: String
-    @NSManaged var developerUrl: URL
+    @NSManaged var developerUrl: URL?
     @NSManaged var rating: Float
     @NSManaged var id: Int
     @NSManaged var saveDate: Date

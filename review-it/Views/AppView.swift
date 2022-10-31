@@ -4,7 +4,7 @@ struct AppView: View {
     private let appIconUrl: URL
     private let appName: String
     private let developerName: String
-    private let developerUrl: URL
+    private let developerUrl: URL?
     private let id: Int
     private let rating: Float
     private let dimension: CGFloat
@@ -45,7 +45,13 @@ struct AppView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
-                Link(destination: developerUrl) {
+                if let developerUrl = developerUrl {
+                    Link(destination: developerUrl) {
+                        Text(developerName)
+                            .multilineTextAlignment(.leading)
+                            .font(.footnote)
+                    }
+                } else {
                     Text(developerName)
                         .multilineTextAlignment(.leading)
                         .font(.footnote)
