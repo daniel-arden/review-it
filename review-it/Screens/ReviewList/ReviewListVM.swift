@@ -18,8 +18,8 @@ final class ReviewListVM: ObservableObject {
             fetchReviews()
         }
     }
-    
-    @Published private(set) var reviews: [Review] = []
+
+    @Published private(set) var viewState: ViewState<[Review]> = .initial
 
     init() {
         selectLast()
@@ -34,26 +34,30 @@ final class ReviewListVM: ObservableObject {
 
 extension ReviewListVM {
     func fetchReviews() {
-        Task {
-            guard let selectedAppId = selectedAppId else {
-                return
-            }
+        Task { @MainActor in
+            do {
+                guard let selectedAppId = selectedAppId else {
+                    return
+                }
 
-            let reviewFeed: ReviewFeed = try await apiService.getRequest(
-                urlString: Constants.reviewUrlString(
-                    for: selectedAppId,
-                    countryCode: userSettings.selectedCountryFilter.rawValue
+                viewState = .loading
+
+                let reviewFeed: ReviewFeed = try await apiService.getRequest(
+                    urlString: Constants.reviewUrlString(
+                        for: selectedAppId,
+                        countryCode: userSettings.selectedCountryFilter.rawValue
+                    )
                 )
-            )
 
-            await MainActor.run {
-                reviews = reviewFeed.reviews
+                viewState = .results(reviewFeed.reviews)
+            } catch {
+                viewState = .error(error)
             }
         }
     }
 
     func removeReviews() {
-        reviews = []
+        viewState = .initial
     }
 
     func selectLast() {

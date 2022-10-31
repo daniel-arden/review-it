@@ -10,7 +10,7 @@ final class AddAppScreenVM: ObservableObject {
 
     // MARK: Public Properties
     @Published var searchText = ""
-    @Published var searchState: SearchState = .initial
+    @Published var searchState: ViewState<[AppSearchResult]> = .initial
 
     init() {
         bind()
@@ -45,30 +45,11 @@ private extension AddAppScreenVM {
     func performSearch(of searchText: String) {
         Task { @MainActor in
             do {
-                searchState = .searching
+                searchState = .loading
                 let resultFeed = try await searchService.searchApp(searchText, countryCode: "us")
                 searchState = .results(resultFeed.results)
             } catch {
                 searchState = .error(error)
-            }
-        }
-    }
-}
-
-// MARK: - SearchState
-extension AddAppScreenVM {
-    enum SearchState: Equatable {
-        case error(Error)
-        case initial
-        case searching
-        case results([AppSearchResult])
-
-        static func == (lhs: AddAppScreenVM.SearchState, rhs: AddAppScreenVM.SearchState) -> Bool {
-            switch (lhs, rhs) {
-            case (.error, .error): return true
-            case (.initial, .initial): return true
-            case (.results(let lhsModels), .results(let rhsModels)): return lhsModels == rhsModels
-            default: return false
             }
         }
     }

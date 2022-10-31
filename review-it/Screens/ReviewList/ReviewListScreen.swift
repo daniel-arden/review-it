@@ -71,33 +71,39 @@ private extension ReviewListScreen {
             Divider()
 
             ScrollView {
-                ScrollViewReader { proxy in
-                    LazyVStack(alignment: .leading) {
-                        Spacer()
-                            .frame(height: 1)
-                            .id(Self.reviewListTopViewId)
-                            .onChange(of: shouldScrollReviewListToTop) { _ in
-                                proxy.scrollTo(Self.reviewListTopViewId)
-                            }
-                            .onChange(of: viewModel.selectedAppId) { _ in
-                                shouldScrollReviewListToTop = UUID()
-                            }
+                switch viewModel.viewState {
+                case let .error(error):
+                    InformationText(error.localizedDescription)
+                case .initial:
+                    InformationText("Please add apps that you want to observe")
+                case .loading:
+                    LoadingView()
+                case let .results(reviews):
+                    if reviews.isEmpty {
+                        InformationText("No reviews available for given filters")
+                    } else {
+                        ScrollViewReader { proxy in
+                            LazyVStack(alignment: .leading) {
+                                Spacer()
+                                    .frame(height: 1)
+                                    .id(Self.reviewListTopViewId)
+                                    .onChange(of: shouldScrollReviewListToTop) { _ in
+                                        proxy.scrollTo(Self.reviewListTopViewId)
+                                    }
+                                    .onChange(of: viewModel.selectedAppId) { _ in
+                                        shouldScrollReviewListToTop = UUID()
+                                    }
 
-                        ForEach(viewModel.reviews) {
-                            ReviewCardView(review: $0)
+                                ForEach(reviews) {
+                                    ReviewCardView(review: $0)
+                                }
+                            }
+                            .padding()
                         }
+                        .refreshable { viewModel.fetchReviews() }
                     }
-                    .padding()
                 }
             }
-            .overlay {
-                if viewModel.reviews.isEmpty {
-                    Text("Please add apps that you want to observe")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .foregroundColor(.secondary)
-                }
-            }
-            .refreshable { viewModel.fetchReviews() }
         }
         .frame(minWidth: 400, minHeight: 400)
         .sheet(isPresented: $addAppPresented) {

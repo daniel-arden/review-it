@@ -69,6 +69,9 @@
 		5AC479E3290DD7260025E592 /* CountryFilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC479E2290DD7260025E592 /* CountryFilterPicker.swift */; };
 		5ACCA076290F71570047BA82 /* SeenStatusFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA075290F71570047BA82 /* SeenStatusFilter.swift */; };
 		5ACCA078290F744A0047BA82 /* SeenStatusFilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA077290F744A0047BA82 /* SeenStatusFilterPicker.swift */; };
+		5ACCA07A290F7D410047BA82 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA079290F7D410047BA82 /* ViewState.swift */; };
+		5ACCA07C290F7DE70047BA82 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA07B290F7DE70047BA82 /* LoadingView.swift */; };
+		5ACCA07E290F7E1D0047BA82 /* InformationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA07D290F7E1D0047BA82 /* InformationText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		5AC479E2290DD7260025E592 /* CountryFilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFilterPicker.swift; sourceTree = "<group>"; };
 		5ACCA075290F71570047BA82 /* SeenStatusFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenStatusFilter.swift; sourceTree = "<group>"; };
 		5ACCA077290F744A0047BA82 /* SeenStatusFilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenStatusFilterPicker.swift; sourceTree = "<group>"; };
+		5ACCA079290F7D410047BA82 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		5ACCA07B290F7DE70047BA82 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5ACCA07D290F7E1D0047BA82 /* InformationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +301,7 @@
 				5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */,
 				5A426D96290699DF00529F2F /* CountryModel.swift */,
 				5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */,
+				5ACCA079290F7D410047BA82 /* ViewState.swift */,
 				5ACCA075290F71570047BA82 /* SeenStatusFilter.swift */,
 				5A1F54F228E9A23A0038A1CC /* Author.swift */,
 				5A13D5F728F2E36900A15735 /* AppSearchResult.swift */,
@@ -347,6 +354,8 @@
 				5A1F552928EA27180038A1CC /* BouncingButtonStyle.swift */,
 				5A13D5FE28F30E2400A15735 /* RoundedButtonStyle.swift */,
 				5A1F551528E9C14F0038A1CC /* RatingView.swift */,
+				5ACCA07B290F7DE70047BA82 /* LoadingView.swift */,
+				5ACCA07D290F7E1D0047BA82 /* InformationText.swift */,
 				5A1F552128EA1CD60038A1CC /* AppTileView.swift */,
 				5A13D60028F35E6300A15735 /* AppView.swift */,
 				5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */,
@@ -569,6 +578,7 @@
 				5A1F54FD28E9A2DB0038A1CC /* ReviewListScreen.swift in Sources */,
 				5A1F552628EA1EE90038A1CC /* Image+ImageRepresentable.swift in Sources */,
 				5A1F551628E9C14F0038A1CC /* RatingView.swift in Sources */,
+				5ACCA07A290F7D410047BA82 /* ViewState.swift in Sources */,
 				5A1F550328E9A32E0038A1CC /* ReviewCardView.swift in Sources */,
 				5A1F552028EA1A230038A1CC /* ImageRepresentable.swift in Sources */,
 				5A20CEA828F756C50006566E /* UserDefaultsKey.swift in Sources */,
@@ -581,10 +591,12 @@
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
 				5ACCA078290F744A0047BA82 /* SeenStatusFilterPicker.swift in Sources */,
 				5ACCA076290F71570047BA82 /* SeenStatusFilter.swift in Sources */,
+				5ACCA07E290F7E1D0047BA82 /* InformationText.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
 				5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */,
 				5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */,
 				5AAD122F2901908B00A4F01E /* SettingsAccountView.swift in Sources */,
+				5ACCA07C290F7DE70047BA82 /* LoadingView.swift in Sources */,
 				5A316E3C290602EC00AFDC47 /* PersistenceControllerError.swift in Sources */,
 				5A1F551928E9CCC60038A1CC /* Constants.swift in Sources */,
 				5A426D9D29069BB400529F2F /* CountryName.swift in Sources */,
