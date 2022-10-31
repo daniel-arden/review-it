@@ -1,6 +1,8 @@
 # Review-IT
 ![reviewit-cover](https://user-images.githubusercontent.com/49719874/199089176-635790f6-0925-4403-a098-4305cd078cf0.png)
 
+Currently work in progress.
+
 Available for macOS, iOS and iPadOS
 
 ## What is it?
