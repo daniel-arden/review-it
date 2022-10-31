@@ -49,7 +49,7 @@ struct AppView: View {
                 Spacer()
                     .frame(height: 2)
 
-                RatingView(rating: rating)
+                RatingView(rating: rating, labelVisible: true)
             }
             .multilineTextAlignment(.leading)
             .padding(.vertical)
