@@ -5,6 +5,7 @@ final class APIService {
     private let decoder = FormattersCoders.jsonDecoder
 
     func getRequest<T: Decodable>(urlString: String) async throws -> T {
+        print("🚀🚀🚀 Sending request with url: \(urlString)")
         guard let url = URL(string: urlString) else {
             throw APIError.failedToCreateUrl
         }

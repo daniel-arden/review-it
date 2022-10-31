@@ -1,9 +1,12 @@
+import Combine
 import CoreData
 import SwiftUI
 
 final class ReviewListVM: ObservableObject {
+    @ObservedObject private var userSettings = UserSettingsService.shared
     private let apiService = APIService.shared
     private let moc = PersistenceController.shared.moc
+    private var countryFilterCancellable: AnyCancellable?
 
     @AppStorage(UserDefaults.Key.selectedAppId) var selectedAppId: Int? {
         didSet {
@@ -22,6 +25,11 @@ final class ReviewListVM: ObservableObject {
     init() {
         selectLast()
         fetchReviews()
+
+        countryFilterCancellable = userSettings.countryFilterDidChange
+            .sink { [weak self] _ in
+                self?.fetchReviews()
+            }
     }
 }
 
@@ -33,7 +41,10 @@ extension ReviewListVM {
             }
 
             let reviewFeed: ReviewFeed = try await apiService.getRequest(
-                urlString: Constants.reviewUrlString(for: selectedAppId)
+                urlString: Constants.reviewUrlString(
+                    for: selectedAppId,
+                    countryCode: userSettings.selectedCountryFilter.rawValue
+                )
             )
 
             await MainActor.run {

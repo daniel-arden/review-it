@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct review_itApp: App {
-    @StateObject private var appReloadService = AppReloadService()
+    @StateObject private var appReloadService = AppReloadService.shared
 
     var body: some Scene {
         WindowGroup {

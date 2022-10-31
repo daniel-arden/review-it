@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CountryPicker: View {
-    @ObservedObject private var userSettings = UserSettingsService()
+    @ObservedObject private var userSettings = UserSettingsService.shared
     @State private var countryListShown = false
 
     var body: some View {
@@ -64,10 +64,8 @@ private struct CountryListView: View {
 
     func countryFilterButton(for countryFilter: CountryFilter) -> some View {
         Button(countryFilter.pickerLabel) {
-            withAnimation {
-                userSettings.selectedCountryFilter = countryFilter
-                dismiss()
-            }
+            userSettings.selectedCountryFilter = countryFilter
+            dismiss()
         }
         .buttonStyle(BouncingButtonStyle())
     }
@@ -120,8 +118,6 @@ private extension CountryListView {
 private extension CountryFilter {
     var pickerLabel: String {
         switch self {
-        case .all:
-            return "🌎 All"
         case .country(let countryModel):
             return countryModel.fullDescription
         }
@@ -132,6 +128,6 @@ struct CountryPicker_Previews: PreviewProvider {
     static var previews: some View {
         CountryPicker()
         CountryListView()
-            .environmentObject(UserSettingsService())
+            .environmentObject(UserSettingsService.shared)
     }
 }

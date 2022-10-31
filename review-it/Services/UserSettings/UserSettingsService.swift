@@ -1,3 +1,4 @@
+import Combine
 import SwiftUI
 
 final class UserSettingsService: ObservableObject {
@@ -7,11 +8,14 @@ final class UserSettingsService: ObservableObject {
     @AppStorage(UserDefaults.Key.reviewListControls) var reviewListControls = true
     @AppStorage(UserDefaults.Key.newReviewsHighlighted) var newReviewsHighlighted = true
     @AppStorage(UserDefaults.Key.recentCountryFilters) private(set) var recentCountryFilters: [CountryFilter] = []
-    @AppStorage(UserDefaults.Key.selectedCountryFilter) var selectedCountryFilter: CountryFilter = .all {
+    @AppStorage(UserDefaults.Key.selectedCountryFilter) var selectedCountryFilter: CountryFilter = .default {
         didSet {
+            countryFilterDidChange.send(selectedCountryFilter)
             addRecentCountryFilter(selectedCountryFilter)
         }
     }
+
+    let countryFilterDidChange = PassthroughSubject<CountryFilter, Never>()
 }
 
 extension UserSettingsService {
@@ -28,8 +32,6 @@ extension UserSettingsService {
             assertionFailure("Country filter count should never exceed 5")
             return
         }
-
-        guard countryFilter != .all else { return }
 
         if recentCountryFilters.contains(countryFilter) {
             recentCountryFilters.removeAll { $0 == countryFilter }

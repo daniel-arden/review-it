@@ -1,13 +1,10 @@
 import Foundation
 
-enum CountryFilter: Identifiable, RawRepresentable, Codable, Hashable, CaseIterable {
-    case all
+enum CountryFilter: Identifiable, RawRepresentable, Codable, Hashable, CaseIterable, Equatable {
     case country(CountryModel)
 
     init?(rawValue: String) {
         switch rawValue {
-        case "all":
-            self = .all
         default:
             guard
                 Locale.countryCodes.contains(rawValue),
@@ -22,8 +19,6 @@ enum CountryFilter: Identifiable, RawRepresentable, Codable, Hashable, CaseItera
 
     var rawValue: String {
         switch self {
-        case .all:
-            return "all"
         case let .country(countryModel):
             return countryModel.countryCode
         }
@@ -34,6 +29,12 @@ enum CountryFilter: Identifiable, RawRepresentable, Codable, Hashable, CaseItera
     }
 
     static var allCases: [CountryFilter] {
-        [CountryFilter.all] + Locale.countryCodes.compactMap { CountryFilter(rawValue: $0) }
+        Locale.countryCodes.compactMap { CountryFilter(rawValue: $0) }
+    }
+}
+
+extension CountryFilter {
+    static var `default`: CountryFilter {
+        CountryFilter(rawValue: "US")!
     }
 }
