@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct AppTileView: View {
-    @Environment(\.editMode) private var editMode
     private static let plusIconDimension: CGFloat = 48
 
     private let appTileModel: AppTileModel
@@ -46,6 +45,7 @@ struct AppTileView: View {
                                         .zIndex(5)
                                         .padding(8)
                                 }
+                                .buttonStyle(.plain)
                             }
                         }
                 }

@@ -70,7 +70,29 @@ private extension ReviewListScreen {
                 Divider()
             }
             .fixedSize(horizontal: false, vertical: true)
-            .toolbar { editButton }
+            .toolbar {
+                ToolbarItem {
+                    HStack(spacing: 0) {
+                        Button {
+                            addAppPresented.toggle()
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                        .frame(width: 40, height: 40)
+
+                        #if !os(macOS)
+                        NavigationLink {
+                            SettingsScreen()
+                        } label: {
+                            Image(systemName: "gear")
+                        }
+                        .frame(width: 40, height: 40)
+                        #endif
+
+                        editButton
+                    }
+                }
+            }
 
             if userSettings.reviewListControls {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -146,25 +168,6 @@ private extension ReviewListScreen {
     var content: some View {
         NavigationStack {
             innerContentView
-                .toolbar {
-                    ToolbarItem {
-                        HStack(spacing: 0) {
-                            Button {
-                                addAppPresented.toggle()
-                            } label: {
-                                Image(systemName: "plus")
-                            }
-                            .frame(width: 40, height: 40)
-
-                            NavigationLink {
-                                SettingsScreen()
-                            } label: {
-                                Image(systemName: "gear")
-                            }
-                            .frame(width: 40, height: 40)
-                        }
-                    }
-                }
         }
     }
 }
