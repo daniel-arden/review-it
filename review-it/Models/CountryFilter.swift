@@ -1,6 +1,6 @@
 import Foundation
 
-enum CountryFilter: Identifiable, RawRepresentable, Codable, Hashable, CaseIterable, Equatable {
+enum CountryFilter: Identifiable, RawRepresentable, Codable, Hashable, CaseIterable {
     case country(CountryModel)
 
     init?(rawValue: String) {

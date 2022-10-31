@@ -18,8 +18,7 @@ final class ReviewListVM: ObservableObject {
             fetchReviews()
         }
     }
-
-    @AppStorage(UserDefaults.Key.recentCountryFilters) var recentCountryFilters: [CountryFilter] = []
+    
     @Published private(set) var reviews: [Review] = []
 
     init() {

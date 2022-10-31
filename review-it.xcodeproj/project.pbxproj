@@ -66,7 +66,9 @@
 		5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */; };
 		5AC43F02290B3B9B00BD4850 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */; };
 		5AC43F04290B3C8E00BD4850 /* CountryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */; };
-		5AC479E3290DD7260025E592 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC479E2290DD7260025E592 /* CountryPicker.swift */; };
+		5AC479E3290DD7260025E592 /* CountryFilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC479E2290DD7260025E592 /* CountryFilterPicker.swift */; };
+		5ACCA076290F71570047BA82 /* SeenStatusFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA075290F71570047BA82 /* SeenStatusFilter.swift */; };
+		5ACCA078290F744A0047BA82 /* SeenStatusFilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA077290F744A0047BA82 /* SeenStatusFilterPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +152,9 @@
 		5AAD12322901A63B00A4F01E /* View+PlatformPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformPadding.swift"; sourceTree = "<group>"; };
 		5AC43F01290B3B9B00BD4850 /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
 		5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFilter.swift; sourceTree = "<group>"; };
-		5AC479E2290DD7260025E592 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
+		5AC479E2290DD7260025E592 /* CountryFilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFilterPicker.swift; sourceTree = "<group>"; };
+		5ACCA075290F71570047BA82 /* SeenStatusFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenStatusFilter.swift; sourceTree = "<group>"; };
+		5ACCA077290F744A0047BA82 /* SeenStatusFilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenStatusFilterPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,7 @@
 				5A1F54EA28E9A1FE0038A1CC /* ReviewFeed.swift */,
 				5A426D96290699DF00529F2F /* CountryModel.swift */,
 				5AC43F03290B3C8E00BD4850 /* CountryFilter.swift */,
+				5ACCA075290F71570047BA82 /* SeenStatusFilter.swift */,
 				5A1F54F228E9A23A0038A1CC /* Author.swift */,
 				5A13D5F728F2E36900A15735 /* AppSearchResult.swift */,
 				5A1F54EC28E9A2090038A1CC /* Feed.swift */,
@@ -346,7 +351,8 @@
 				5A13D60028F35E6300A15735 /* AppView.swift */,
 				5A58C61A28EE34BD008C47D0 /* SearchbarView.swift */,
 				5A13D5FC28F2EB5E00A15735 /* AppSearchResultView.swift */,
-				5AC479E2290DD7260025E592 /* CountryPicker.swift */,
+				5AC479E2290DD7260025E592 /* CountryFilterPicker.swift */,
+				5ACCA077290F744A0047BA82 /* SeenStatusFilterPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -573,6 +579,8 @@
 				5AC43F02290B3B9B00BD4850 /* Array+RawRepresentable.swift in Sources */,
 				5AAD12332901A63B00A4F01E /* View+PlatformPadding.swift in Sources */,
 				5A1F54ED28E9A2090038A1CC /* Feed.swift in Sources */,
+				5ACCA078290F744A0047BA82 /* SeenStatusFilterPicker.swift in Sources */,
+				5ACCA076290F71570047BA82 /* SeenStatusFilter.swift in Sources */,
 				5A1F54FF28E9A2FF0038A1CC /* ReviewListVM.swift in Sources */,
 				5A13D60A28F375DB00A15735 /* UserSettingsService.swift in Sources */,
 				5A1F552A28EA27180038A1CC /* BouncingButtonStyle.swift in Sources */,
@@ -589,7 +597,7 @@
 				5A1F551D28EA19EB0038A1CC /* AppModel.swift in Sources */,
 				5A13D5FD28F2EB5E00A15735 /* AppSearchResultView.swift in Sources */,
 				5AAD122D2901908100A4F01E /* SettingsAlertsView.swift in Sources */,
-				5AC479E3290DD7260025E592 /* CountryPicker.swift in Sources */,
+				5AC479E3290DD7260025E592 /* CountryFilterPicker.swift in Sources */,
 				5A13D60428F36FC300A15735 /* PersistenceController.swift in Sources */,
 				5A426D9B29069BB000529F2F /* CountryCode.swift in Sources */,
 				5A1F54F628E9A2710038A1CC /* APIService.swift in Sources */,

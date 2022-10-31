@@ -20,6 +20,8 @@ extension UserDefaults {
 
         /// Currently Selected country filter
         static let selectedCountryFilter = "selectedCountryFilter"
+
+        /// Currently Selected Seen Status filter
+        static let seenStatusFilter = "seenStatusFilter"
     }
 }
-

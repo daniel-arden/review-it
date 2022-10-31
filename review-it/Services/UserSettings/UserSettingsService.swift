@@ -14,6 +14,7 @@ final class UserSettingsService: ObservableObject {
             addRecentCountryFilter(selectedCountryFilter)
         }
     }
+    @AppStorage(UserDefaults.Key.seenStatusFilter) var seenStatusFilter: SeenStatusFilter = .all
 
     let countryFilterDidChange = PassthroughSubject<CountryFilter, Never>()
 }

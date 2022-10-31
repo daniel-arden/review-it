@@ -61,7 +61,8 @@ private extension ReviewListScreen {
             if userSettings.reviewListControls {
                 ScrollView(.horizontal) {
                     HStack(spacing: 16) {
-                        CountryPicker()
+                        CountryFilterPicker()
+                        SeenStatusFilterPicker()
                     }
                     .padding()
                 }

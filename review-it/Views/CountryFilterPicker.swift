@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CountryPicker: View {
+struct CountryFilterPicker: View {
     @ObservedObject private var userSettings = UserSettingsService.shared
     @State private var countryListShown = false
 
@@ -129,7 +129,7 @@ private extension CountryFilter {
 
 struct CountryPicker_Previews: PreviewProvider {
     static var previews: some View {
-        CountryPicker()
+        CountryFilterPicker()
         CountryListView()
             .environmentObject(UserSettingsService.shared)
     }

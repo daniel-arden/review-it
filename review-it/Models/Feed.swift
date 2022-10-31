@@ -3,5 +3,5 @@ struct Feed: Decodable, Hashable {
         case reviews = "entry"
     }
 
-    let reviews: [Review]
+    let reviews: [Review]?
 }
