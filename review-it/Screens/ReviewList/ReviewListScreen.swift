@@ -98,7 +98,7 @@ private extension ReviewListScreen {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
                         CountryFilterPicker()
-                        SeenStatusFilterPicker()
+//                        SeenStatusFilterPicker() // TODO: Logic not implemented
                     }
                     .padding()
                 }
