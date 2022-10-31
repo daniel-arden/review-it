@@ -22,10 +22,10 @@ struct AppTileView: View {
         }
         .buttonStyle(BouncingButtonStyle())
         .overlay(
-            // FIXME: line cropped vertically in AppCarousel on macOS
             RoundedRectangle(cornerRadius: 12)
                 .stroke(Color.accentColor, lineWidth: isSelected ? 2 : 0)
         )
+        .padding(.vertical, 1)
     }
 }
 
