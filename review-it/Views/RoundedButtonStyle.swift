@@ -3,9 +3,14 @@ import SwiftUI
 struct RoundedButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
     private let cornerRadius: CGFloat
+    private let backgroundColor: Color
 
-    init(cornerRadius: CGFloat = .infinity) {
+    init(
+        cornerRadius: CGFloat = .infinity,
+        backgroundColor: Color = .backgroundSecondary
+    ) {
         self.cornerRadius = cornerRadius
+        self.backgroundColor = backgroundColor
     }
 
     func makeBody(configuration: Configuration) -> some View {
@@ -14,7 +19,7 @@ struct RoundedButtonStyle: ButtonStyle {
             .foregroundColor(.accentColor)
             .padding(.horizontal, 24)
             .padding(.vertical, 8)
-            .background(Color.gray.opacity(0.1))
+            .background(backgroundColor)
             .cornerRadius(cornerRadius)
             .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
             .opacity(configuration.isPressed ? 0.9 : 1.0)

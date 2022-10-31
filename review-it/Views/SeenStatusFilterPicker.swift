@@ -29,7 +29,7 @@ struct SeenStatusFilterPicker: View {
         .menuStyle(.borderlessButton)
         .padding(.horizontal, 24)
         .padding(.vertical, 8)
-        .background(Color.gray.opacity(0.1))
+        .background(Color.backgroundSecondary)
         .cornerRadius(.infinity)
         .transaction { transaction in
             transaction.animation = nil

@@ -42,7 +42,7 @@ private extension AppTileView {
                     width: Self.plusIconDimension,
                     height: Self.plusIconDimension
                 )
-                .background(Color.primary.opacity(0.1))
+                .background(Color.backgroundTertiary)
                 .cornerRadius(8)
 
             Text("Add App")

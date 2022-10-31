@@ -13,7 +13,9 @@ struct AppSearchResultView: View {
                 Spacer()
 
                 Button("ADD", action: addAction)
-                    .buttonStyle(RoundedButtonStyle())
+                    .buttonStyle(
+                        RoundedButtonStyle(backgroundColor: Color.backgroundTertiary)
+                    )
                     .disabled(isAlreadyAdded)
             }
         }

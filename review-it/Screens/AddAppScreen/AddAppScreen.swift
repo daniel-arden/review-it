@@ -104,6 +104,7 @@ private extension AddAppScreen {
             idealHeight: 500,
             maxHeight: 1000
         )
+        .background(Color.backgroundPrimary)
     }
 }
 #endif

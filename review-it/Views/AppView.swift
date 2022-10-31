@@ -43,8 +43,13 @@ struct AppView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(appName)
                     .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-                Link(developerName, destination: developerUrl)
+                Link(destination: developerUrl) {
+                    Text(developerName)
+                        .multilineTextAlignment(.leading)
+                        .font(.footnote)
+                }
 
                 Spacer()
                     .frame(height: 2)
