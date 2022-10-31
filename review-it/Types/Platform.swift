@@ -1,6 +1,4 @@
 struct Platform: OptionSet {
-    // TODO: Cheeck if this is a proper way to initialize an OptionSet
-
     init() {
         rawValue = ""
     }

@@ -37,8 +37,7 @@ private extension SettingsGeneralView {
         do {
             try userSettings.reset()
         } catch {
-            // TODO: Error handling
-            fatalError(error.localizedDescription)
+            assertionFailure("Failed to reset UserSettings with error: \(error)")
         }
         
         appReloadService.reloadApp()

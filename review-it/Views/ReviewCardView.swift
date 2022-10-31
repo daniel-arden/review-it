@@ -19,8 +19,8 @@ struct ReviewCardView: View {
 
                 VStack(alignment: .trailing) {
                     if let dateFormatted = review.dateUpdated?.formatted(
-                        date: .abbreviated,
-                        time: .complete
+                        date: .numeric,
+                        time: .shortened
                     ) {
                         Text(dateFormatted)
                     }
@@ -29,6 +29,7 @@ struct ReviewCardView: View {
                 }
                 .font(.body)
                 .foregroundColor(.secondary)
+                .multilineTextAlignment(.trailing)
             }
 
             Text(review.caption)
