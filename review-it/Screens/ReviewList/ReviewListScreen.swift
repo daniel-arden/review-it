@@ -59,8 +59,12 @@ private extension ReviewListScreen {
             .fixedSize(horizontal: false, vertical: true)
 
             if userSettings.reviewListControls {
-                CountryPicker()
+                ScrollView(.horizontal) {
+                    HStack(spacing: 16) {
+                        CountryPicker()
+                    }
                     .padding()
+                }
             }
 
             Divider()

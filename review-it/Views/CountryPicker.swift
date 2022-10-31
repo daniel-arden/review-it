@@ -12,6 +12,7 @@ struct CountryPicker: View {
             CountryListView()
                 .environmentObject(userSettings)
         }
+        .buttonStyle(RoundedButtonStyle())
     }
 }
 
@@ -98,19 +99,21 @@ private extension CountryListView {
 private extension CountryListView {
     var content: some View {
         VStack(spacing: 0) {
-            SearchbarView(text: $countryListVM.searchedCountry)
-                .padding()
+            SearchbarView(
+                text: $countryListVM.searchedCountry,
+                placeholder: "Search for country"
+            )
+            .padding()
 
             innerContentView
                 .onKeyDown(.escape) { dismiss() }
-                .frame(
-                    minWidth: 400,
-                    maxWidth: 800,
-                    minHeight: 500,
-                    maxHeight: 1000
-                )
         }
-
+        .frame(
+            minWidth: 400,
+            maxWidth: 800,
+            minHeight: 500,
+            maxHeight: 1000
+        )
     }
 }
 #endif

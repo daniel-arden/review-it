@@ -100,7 +100,10 @@ private extension AddAppScreen {
 private extension AddAppScreen {
     var content: some View {
         VStack(spacing: 0) {
-            SearchbarView(text: $addAppScreenVM.searchText)
+            SearchbarView(
+                text: $addAppScreenVM.searchText,
+                placeholder: "Search for apps on the AppStore"
+            )
 
             innerContentView
 

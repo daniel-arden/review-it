@@ -17,11 +17,12 @@ struct SearchbarView: NSViewRepresentable {
     }
 
     @Binding var text: String
+    let placeholder: String
 
     func makeNSView(context: Context) -> NSSearchField {
         let searchField = NSSearchField(frame: .zero)
         searchField.controlSize = .large
-        searchField.placeholderString = "Search for apps on the AppStore"
+        searchField.placeholderString = placeholder
         return searchField
     }
 
